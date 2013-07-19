@@ -1,0 +1,12 @@
+tmp/
+log/
+tags
+*~
+*.sw*
+*.tmp
+*.log
+*.old
+*.bak
+*.zip
+*.[t]gz
+*.[t]bz2
