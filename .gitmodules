@@ -94,3 +94,39 @@
 [submodule "bundle/vim-colors-solarized"]
 	path = bundle/vim-colors-solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "bundle/vim-easymotion"]
+	path = bundle/vim-easymotion
+	url = git://github.com/Lokaltog/vim-easymotion.git
+[submodule "bundle/vim-golang"]
+	path = bundle/vim-golang
+	url = git://github.com/jnwhiteh/vim-golang.git
+[submodule "bundle/vim-indexed-search"]
+	path = bundle/vim-indexed-search
+	url = git://github.com/henrik/vim-indexed-search.git
+[submodule "bundle/vim-jquery"]
+	path = bundle/vim-jquery
+	url = git://github.com/itspriddle/vim-jquery.git
+[submodule "bundle/vim-ruby"]
+	path = bundle/vim-ruby
+	url = git://github.com/vim-ruby/vim-ruby.git
+[submodule "bundle/vim-ruby-sinatra"]
+	path = bundle/vim-ruby-sinatra
+	url = git://github.com/hallison/vim-ruby-sinatra.git
+[submodule "bundle/vim-rvm"]
+	path = bundle/vim-rvm
+	url = git://github.com/tpope/vim-rvm.git
+[submodule "bundle/vim-textobj-rubyblock"]
+	path = bundle/vim-textobj-rubyblock
+	url = git://github.com/nelstrom/vim-textobj-rubyblock.git
+[submodule "bundle/vim-textobj-user"]
+	path = bundle/vim-textobj-user
+	url = git://github.com/kana/vim-textobj-user.git
+[submodule "bundle/zencoding-vim"]
+	path = bundle/zencoding-vim
+	url = git://github.com/mattn/zencoding-vim.git
+[submodule "bundle/vim-yankring"]
+	path = bundle/vim-yankring
+	url = git://github.com/chrismetcalf/vim-yankring.git
+[submodule "bundle/vim-vroom"]
+	path = bundle/vim-vroom
+	url = git://github.com/skalnik/vim-vroom.git
