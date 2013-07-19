@@ -1,5 +1,5 @@
 # vim-configs
-This repo is used to manage my vim configuration.
+This repo is used to manage my vim configuration. This setup is heavily based on akitaonrails' vimfiles.
 
 ## plugins
 * [ack.vim] (http://www.vim.org/scripts/script.php?script_id=2572)
