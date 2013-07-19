@@ -1,6 +1,15 @@
 [submodule "snippets"]
 	path = snippets
-	url = https://github.com/asux/snipmate-snippets.git
+	url = git://github.com/asux/snipmate-snippets.git
 [submodule "bundle/tabular"]
 	path = bundle/tabular
-	url = https://github.com/godlygeek/tabular.git
+	url = git://github.com/godlygeek/tabular.git
+[submodule "bundle/NERD_commenter"]
+	path = bundle/NERD_commenter
+	url = git://github.com/scrooloose/nerdcommenter.git
+[submodule "bundle/NERD_tree"]
+	path = bundle/NERD_tree
+	url = git://github.com/scrooloose/nerdtree.git
+[submodule "bundle/ack"]
+	path = bundle/ack
+	url = git://github.com/mileszs/ack.vim.git
