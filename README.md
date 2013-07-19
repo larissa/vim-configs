@@ -1,7 +1,7 @@
 # vim-configs
 This repo is used to manage my vim configuration.
 
-## installatin
+## installation
     git clone git://github.com/larissa/vim-configs.git ~/.vim
     cd ~/.vim
     git submodule update --init
