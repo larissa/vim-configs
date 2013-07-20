@@ -124,3 +124,12 @@
 [submodule "bundle/vim-vroom"]
 	path = bundle/vim-vroom
 	url = git://github.com/skalnik/vim-vroom.git
+[submodule "bundle/vim-snipmate"]
+	path = bundle/vim-snipmate
+	url = git://github.com/garbas/vim-snipmate.git
+[submodule "bundle/vim-addon-mw-utils"]
+	path = bundle/vim-addon-mw-utils
+	url = git://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule "bundle/tlib"]
+	path = bundle/tlib
+	url = git://github.com/tomtom/tlib_vim.git
