@@ -133,3 +133,6 @@
 [submodule "bundle/tlib"]
 	path = bundle/tlib
 	url = git://github.com/tomtom/tlib_vim.git
+[submodule "bundle/snippets"]
+	path = bundle/snippets
+	url = git://github.com/honza/vim-snippets.git
