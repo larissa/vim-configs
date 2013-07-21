@@ -40,6 +40,7 @@ This repo is used to manage my vim configuration. This setup is heavily based on
 * [vim-golang] (https://github.com/jnwhiteh/vim-golang)
 * [vim-indexed-search] (http://www.vim.org/scripts/script.php?script_id=1682)
 * [vim-jquery] (http://www.vim.org/scripts/script.php?script_id=2416)
+* [vim-rooter] (https://github.com/airblade/vim-rooter)
 * [vim-ruby] (https://github.com/vim-ruby/vim-ruby)
 * [vim-ruby-sinatra] (http://www.vim.org/scripts/script.php?script_id=2942)
 * [vim-rvm] (http://www.vim.org/scripts/script.php?script_id=4269)

@@ -182,3 +182,7 @@
 	path = bundle/snippets
 	url = git://github.com/honza/vim-snippets.git
         ignore = dirty
+[submodule "bundle/vim-rooter"]
+	path = bundle/vim-rooter
+	url = git://github.com/airblade/vim-rooter.git
+        ignore = dirty
