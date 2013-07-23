@@ -35,10 +35,6 @@ set linespace=4
 "disable visual bell and beep
 set visualbell t_vb=
 
-"try to make possible to navigate within lines of wrapped lines
-nmap <Down> gj
-nmap <Up> gk
-
 "setting format options to automatically wrap line larger than tw
 set formatoptions=lt
 
