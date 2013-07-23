@@ -186,3 +186,7 @@
 	path = bundle/vim-rooter
 	url = git://github.com/airblade/vim-rooter.git
         ignore = dirty
+[submodule "bundle/vim-gnupg"]
+	path = bundle/vim-gnupg
+	url = git://github.com/jamessan/vim-gnupg.git
+        ignore = dirty
