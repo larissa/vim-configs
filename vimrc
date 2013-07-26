@@ -172,8 +172,8 @@ let g:buffergator_suppress_keymaps = 1
 nnoremap <silent> <Leader>l :BuffergatorToggle<CR>
 
 "key mapping for buffer navigation
-nnoremap <Tab> :bnext<CR>
-nnoremap <S-Tab> :bprevious<CR>
+nnoremap <silent> <Tab> :bnext<CR>
+nnoremap <silent> <S-Tab> :bprevious<CR>
 cnoreabbrev bx w<bar>bd
 
 "CtrlP stuff
@@ -195,3 +195,11 @@ au FileType python syn keyword pythonDecorator True None False self
 
 "change yankring directory
 let g:yankring_history_dir = '$HOME/.vim/'
+
+"use vim-rooter manually
+let g:rooter_manual_only = 1
+"set vim-rooter map
+map <silent> <unique> ,cd <Plug>RooterChangeToRootDirectory
+
+"change local directory to match current file
+nnoremap <silent> <Leader>cd :cd %:h<CR>
