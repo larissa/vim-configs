@@ -154,10 +154,6 @@
 	path = bundle/vim-textobj-user
 	url = git://github.com/kana/vim-textobj-user.git
         ignore = dirty
-[submodule "bundle/zencoding-vim"]
-	path = bundle/zencoding-vim
-	url = git://github.com/mattn/zencoding-vim.git
-        ignore = dirty
 [submodule "bundle/vim-yankring"]
 	path = bundle/vim-yankring
 	url = git://github.com/chrismetcalf/vim-yankring.git

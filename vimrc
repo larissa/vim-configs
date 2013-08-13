@@ -203,3 +203,9 @@ map <silent> <unique> ,cd <Plug>RooterChangeToRootDirectory
 
 "change local directory to match current file
 nnoremap <silent> <Leader>cd :cd %:h<CR>
+
+"remove auto-pairs mapping for meta key
+let g:AutoPairsShortcutBackInsert = ''
+let g:AutoPairsShortcutToggle = ''
+let g:AutoPairsShortcutFastWrap = ''
+let g:AutoPairsShortcutJump = ''
