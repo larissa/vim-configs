@@ -144,8 +144,8 @@ function! SetCursorPosition()
     end
 endfunction
 
-"Enabling Zencoding
-let g:user_zen_settings = {
+"enabling emmet
+let g:user_emmet_settings = {
   \  'php' : {
   \    'extends' : 'html',
   \    'filters' : 'c',
@@ -160,8 +160,8 @@ let g:user_zen_settings = {
   \    'extends' : 'html',
   \  },
  \}
-"change default Zencoding key
-let g:user_zen_leader_key = '<c-h>'
+"change default emmet leading key
+let g:user_emmet_leader_key = '<c-h>'
 
 "buffergator configs
 let g:buffergator_viewport_split_policy = "B"

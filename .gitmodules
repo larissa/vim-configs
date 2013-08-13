@@ -186,3 +186,6 @@
 	path = bundle/vim-gnupg
 	url = git://github.com/jamessan/vim-gnupg.git
         ignore = dirty
+[submodule "bundle/emmet-vim"]
+	path = bundle/emmet-vim
+	url = git://github.com/mattn/emmet-vim.git
