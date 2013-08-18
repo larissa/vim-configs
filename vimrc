@@ -1,4 +1,4 @@
-"most of this (about the first 160 lines) belong to akita's vimfiles 
+"most of this (about the first 160 lines) belong to akita's vimfiles
 
 "avoiding annoying CSApprox warning message
 let g:CSApprox_verbose_level = 0
@@ -28,6 +28,7 @@ set hlsearch    "hilight searches by default
 
 set number      "add line numbers
 set wrap linebreak nolist
+set listchars=tab:▸\ ,eol:¬  "makes vim show invisible chars like TextMate
 
 "add some line space for easy reading
 set linespace=4
@@ -87,14 +88,17 @@ set ttymouse=xterm2
 "hide buffers when not displayed
 set hidden
 
+"automatic reloading of vimrc
+autocmd! bufwritepost .vimrc source %
+
 if has("gui_running")
     "tell the term has 256 colors
     set t_Co=256
 
-    colorscheme wombat
+    colorscheme wombat256-edited
     set guitablabel=%M%t
-    set lines=40
-    set columns=115
+    set columns=100
+    set lines=35
 
     if has("gui_gnome") || has("gui_gtk")
         set term=gnome-256color
@@ -128,6 +132,10 @@ nnoremap <C-L> :nohls<CR><C-L>
 
 "make Y consistent with C and D
 nnoremap Y y$
+
+"makes k and j work through wrapped lines
+nnoremap j gj
+nnoremap k gk
 
 "mark syntax errors with :signs
 let g:syntastic_enable_signs=1
@@ -183,12 +191,11 @@ nnoremap <silent> <Leader>b :CtrlPBuffer<CR>
 let g:ctrlp_map = '<Leader>f'
 
 "indent settings for specific filetypes
-autocmd FileType python setlocal shiftwidth=4 softtabstop=4
-autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType css setlocal ts=2 sts=2 sw=2 expandtab
-autocmd FileType javascript setlocal ts=4 sts=4 sw=4 noexpandtab
-
-autocmd FileType nasm setlocal ts=4 sts=4 sw=4 expandtab
+autocmd FileType python setlocal softtabstop=4 shiftwidth=4
+autocmd FileType javascript setlocal sts=4 sw=4
+autocmd FileType nasm setlocal sts=4 sw=4
+autocmd FileType cpp setlocal sts=4 sw=4
+autocmd FileType c setlocal sts=4 sw=4
 
 " some python stuff
 au FileType python syn keyword pythonDecorator True None False self
@@ -199,7 +206,7 @@ let g:yankring_history_dir = '$HOME/.vim/'
 "use vim-rooter manually
 let g:rooter_manual_only = 1
 "set vim-rooter map
-map <silent> <unique> ,cd <Plug>RooterChangeToRootDirectory
+map <silent> <unique> <Leader>cr <Plug>RooterChangeToRootDirectory
 
 "change local directory to match current file
 nnoremap <silent> <Leader>cd :cd %:h<CR>
@@ -209,3 +216,49 @@ let g:AutoPairsShortcutBackInsert = ''
 let g:AutoPairsShortcutToggle = ''
 let g:AutoPairsShortcutFastWrap = ''
 let g:AutoPairsShortcutJump = ''
+
+"map save file to ctrl-s
+nnoremap <c-s> :w<CR>
+
+"fix mistype :W and :Q
+command! -bang -range=% -complete=file -nargs=* WQ <line1>,<line2>wq<bang> <args>
+command! -bang -complete=file -nargs=* Qa qa<bang>
+command! -bang -complete=file -nargs=* QA qa<bang>
+command! -bang -range=% -complete=file -nargs=* Wq <line1>,<line2>wq<bang> <args>
+command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>w<bang> <args>
+command! -bang Q quit<bang>
+
+
+"general function that restores previous state after a command
+function! Preserve(command)
+  " Preparation: save last search, and cursor position.
+  let _s=@/
+  let l = line(".")
+  let c = col(".")
+  " Do the business:
+  execute a:command
+  " Clean up: restore previous search history, and cursor position
+  let @/=_s
+  call cursor(l, c)
+endfunction
+
+"remove trailing whitespaces
+nnoremap <silent> <F5> :call Preserve("%s/\\s\\+$//e")<CR>
+"always remove trailing whitespaces before saving file
+autocmd BufWritePre * :call Preserve("%s/\\s\\+$//e")
+"indent whole file
+nnoremap <silent> <F6> :call Preserve("normal gg=G")<CR>
+
+"training stuff
+nnoremap <up> <nop>
+nnoremap <down> <nop>
+nnoremap <left> <nop>
+nnoremap <right> <nop>
+inoremap <up> <nop>
+inoremap <down> <nop>
+inoremap <left> <nop>
+inoremap <right> <nop>
+vnoremap <up> <nop>
+vnoremap <down> <nop>
+vnoremap <left> <nop>
+vnoremap <right> <nop>
