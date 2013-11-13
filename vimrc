@@ -264,3 +264,27 @@ vnoremap <up> <nop>
 vnoremap <down> <nop>
 vnoremap <left> <nop>
 vnoremap <right> <nop>
+
+"airline configuration
+let g:airline_theme="wombat"
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled=1
+"let g:airline_mode_map = {
+"    \ '__' : '-',
+"    \ 'n'  : 'N',
+"    \ 'i'  : 'I',
+"    \ 'R'  : 'R',
+"    \ 'c'  : 'C',
+"    \ 'v'  : 'V',
+"    \ 'V'  : 'V',
+"    \ '' : 'V',
+"    \ 's'  : 'S',
+"    \ 'S'  : 'S',
+"    \ '' : 'S',
+"    \ }
+set noshowmode    "dont show current mode down the bottom
+set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
+"if !exists('g:airline_symbols')
+"  let g:airline_symbols = {}
+"endif
+"let g:airline_symbols.space = '\ua0'
