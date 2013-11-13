@@ -106,7 +106,7 @@ if has("gui_running")
     if has("gui_gnome") || has("gui_gtk")
         set term=gnome-256color
         colorscheme wombat256-edited
-        set guifont=DejaVu\ Sans\ Mono
+        set guifont=DejaVu\ Sans\ Mono\ 10
         set columns=100
         set lines=35
     endif
