@@ -17,6 +17,9 @@ set nocompatible
 "allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 
+"removing the toolbox because i don't need it anymore
+set guioptions-=T
+
 "store lots of :cmdline history
 set history=500
 
@@ -182,6 +185,7 @@ nnoremap <silent> <Leader>l :BuffergatorToggle<CR>
 "key mapping for buffer navigation
 nnoremap <silent> <Tab> :bnext<CR>
 nnoremap <silent> <S-Tab> :bprevious<CR>
+nnoremap <silent> <C-Tab> :buffer#<CR>
 cnoreabbrev bx w<bar>bd
 
 "CtrlP stuff
@@ -244,8 +248,6 @@ endfunction
 
 "remove trailing whitespaces
 nnoremap <silent> <F5> :call Preserve("%s/\\s\\+$//e")<CR>
-"always remove trailing whitespaces before saving file
-autocmd BufWritePre * :call Preserve("%s/\\s\\+$//e")
 "indent whole file
 nnoremap <silent> <F6> :call Preserve("normal gg=G")<CR>
 
