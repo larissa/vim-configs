@@ -288,3 +288,7 @@ set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
 "  let g:airline_symbols = {}
 "endif
 "let g:airline_symbols.space = '\ua0'
+
+
+"Ignore some files in NERDTree
+let NERDTreeIgnore = ['\.pyc$','\~$']
