@@ -134,10 +134,6 @@
 	path = bundle/vim-ruby
 	url = git://github.com/vim-ruby/vim-ruby.git
         ignore = dirty
-[submodule "bundle/vim-ruby-sinatra"]
-	path = bundle/vim-ruby-sinatra
-	url = git://github.com/hallison/vim-ruby-sinatra.git
-        ignore = dirty
 [submodule "bundle/vim-rvm"]
 	path = bundle/vim-rvm
 	url = git://github.com/tpope/vim-rvm.git
