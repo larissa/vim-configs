@@ -292,3 +292,8 @@ set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
 
 "Ignore some files in NERDTree
 let NERDTreeIgnore = ['\.pyc$','\~$']
+
+"SuperTab configuration
+let g:SuperTabDefaultCompletionType = "context"
+let g:SuperTabContextDefaultCompletionType = "<c-p>"
+let g:SuperTabClosePreviewOnPopupClose = 1
