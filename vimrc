@@ -295,5 +295,9 @@ let NERDTreeIgnore = ['\.pyc$','\~$']
 
 "SuperTab configuration
 let g:SuperTabDefaultCompletionType = "context"
+  autocmd FileType *
+    \ if &omnifunc != '' |
+    \   call SuperTabChain(&omnifunc, "<c-p>") |
+    \ endif
 let g:SuperTabContextDefaultCompletionType = "<c-p>"
 let g:SuperTabClosePreviewOnPopupClose = 1
