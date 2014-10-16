@@ -306,3 +306,5 @@ let g:SuperTabClosePreviewOnPopupClose = 1
 "Swap ; and : to make commands easier to type
 nnoremap ; :
 nnoremap : ;
+vnoremap ; :
+vnoremap : ;
