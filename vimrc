@@ -294,6 +294,7 @@ set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
 let NERDTreeIgnore = ['\.pyc$','\~$']
 
 "SuperTab configuration
+"uses context completion type and falls back to keywork if none found
 let g:SuperTabDefaultCompletionType = "context"
   autocmd FileType *
     \ if &omnifunc != '' |
@@ -301,3 +302,7 @@ let g:SuperTabDefaultCompletionType = "context"
     \ endif
 let g:SuperTabContextDefaultCompletionType = "<c-p>"
 let g:SuperTabClosePreviewOnPopupClose = 1
+
+"Swap ; and : to make commands easier to type
+nnoremap ; :
+nnoremap : ;
