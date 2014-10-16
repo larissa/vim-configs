@@ -303,8 +303,6 @@ let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabContextDefaultCompletionType = "<c-p>"
 let g:SuperTabClosePreviewOnPopupClose = 1
 
-"Swap ; and : to make commands easier to type
-nnoremap ; :
-nnoremap : ;
-vnoremap ; :
-vnoremap : ;
+"Remap : to ç to make commands easier to type on brazilian keyboard
+nnoremap ç :
+vnoremap ç :
