@@ -306,3 +306,6 @@ let g:SuperTabClosePreviewOnPopupClose = 1
 "Remap : to ç to make commands easier to type on brazilian keyboard
 nnoremap ç :
 vnoremap ç :
+
+"Highlight column number 80
+set colorcolumn=80
