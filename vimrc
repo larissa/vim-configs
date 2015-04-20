@@ -298,7 +298,7 @@ nnoremap ç :
 vnoremap ç :
 
 "Highlight column number 80
-set colorcolumn=80
+set colorcolumn=81
 highlight ColorColumn ctermbg=1
 
 "Enable spell check only for text files
