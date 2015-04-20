@@ -121,7 +121,7 @@ colorscheme wombat256custom
 silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
 
 "make <c-l> clear the highlight as well as redraw
-nnoremap <C-L> :nohls<CR><C-L>
+nnoremap <F1> :nohls<CR>:redraw!<CR>
 
 "make Y consistent with C and D
 nnoremap Y y$
