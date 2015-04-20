@@ -112,9 +112,9 @@ if has("gui_running")
         set enc=utf-8
     endif
 else
-    if $COLORTERM == 'gnome-terminal'
-        set term=gnome-256color
-    endif
+    set term=gnome-256color
+    "disables Background Color Erase so theme works on tmux -2
+    set t_ut=
 endif
 colorscheme wombat256custom
 
