@@ -313,5 +313,5 @@ set colorcolumn=80
 "Enable spell check only for text files
 au BufRead,BufNewFile *.tex,*.txt,*.md,*.textile,*.markdown setlocal spell
 "Toggle language
-nnoremap <F12> :setlocal spell! spelllang=en<CR>
-nnoremap <F12> :setlocal spell! spelllang=pt<CR>
+nnoremap <F7> :setlocal spell! spelllang=en<CR>
+nnoremap <F8> :setlocal spell! spelllang=pt<CR>
