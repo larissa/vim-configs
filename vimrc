@@ -94,18 +94,14 @@ set hidden
 "automatic reloading of vimrc
 autocmd! bufwritepost .vimrc source %
 
+"tell the term has 256 colors
+set t_Co=256
 if has("gui_running")
-    "tell the term has 256 colors
-    set t_Co=256
 
-    colorscheme wombat256-edited
     set guitablabel=%M%t
-    set columns=100
-    set lines=35
 
     if has("gui_gnome") || has("gui_gtk")
         set term=gnome-256color
-        colorscheme wombat256-edited
         set guifont=DejaVu\ Sans\ Mono\ 10
         set columns=100
         set lines=35
@@ -116,17 +112,11 @@ if has("gui_running")
         set enc=utf-8
     endif
 else
-    "dont load csapprox if there is no gui support - silences an annoying warning
-    let g:CSApprox_loaded = 1
-
-    "set bclear colorscheme when running vim in gnome terminal
     if $COLORTERM == 'gnome-terminal'
         set term=gnome-256color
-        colorscheme bclear
-    else
-        colorscheme default
     endif
 endif
+colorscheme wombat256custom
 
 silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
 
@@ -309,6 +299,7 @@ vnoremap ç :
 
 "Highlight column number 80
 set colorcolumn=80
+highlight ColorColumn ctermbg=1
 
 "Enable spell check only for text files
 au BufRead,BufNewFile *.tex,*.txt,*.md,*.textile,*.markdown setlocal spell

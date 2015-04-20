@@ -286,7 +286,7 @@ call <SID>X("Todo",			"857b6f",	"",			"italic")
 			"Ignore
 "Special case for theme to work better on terminal
 exec "hi SpellCap ctermfg=000"
-exec "hi SpellBad ctermfg=224"
+exec "hi SpellBad ctermfg=231 ctermbg=166"
 
 hi! link VisualNOS	Visual
 hi! link NonText	LineNr
