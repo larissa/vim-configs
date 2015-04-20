@@ -162,7 +162,7 @@ let g:user_emmet_settings = {
   \  },
  \}
 "change default emmet leading key
-let g:user_emmet_leader_key = '<c-h>'
+let g:user_emmet_leader_key = '<Leader>h'
 
 "buffergator configs
 let g:buffergator_viewport_split_policy = "B"
