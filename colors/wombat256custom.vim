@@ -1,4 +1,3 @@
-" The one I slightly modified from wombat256.vim
 " Vim color file
 " Maintainer:   David Liang (bmdavll at gmail dot com)
 " Last Change:  November 28 2008
@@ -16,7 +15,7 @@ if version > 580
 	endif
 endif
 
-let g:colors_name = "wombat256"
+let g:colors_name = "wombat256custom"
 
 if !has("gui_running") && &t_Co != 88 && &t_Co != 256
 	finish
@@ -285,8 +284,11 @@ call <SID>X("Todo",			"857b6f",	"",			"italic")
 			"Error
 			"Ignore
 "Special case for theme to work better on terminal
-exec "hi SpellCap ctermfg=000"
+exec "hi SpellCap ctermfg=000 ctermbg=33"
 exec "hi SpellBad ctermfg=231 ctermbg=166"
+
+"Color of highlighted column
+exec "hi ColorColumn ctermbg=1"
 
 hi! link VisualNOS	Visual
 hi! link NonText	LineNr
