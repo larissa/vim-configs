@@ -169,3 +169,6 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = git@github.com:majutsushi/tagbar.git
+[submodule "bundle/nrrwrgn"]
+	path = bundle/nrrwrgn
+	url = git@github.com:chrisbra/NrrwRgn.git
