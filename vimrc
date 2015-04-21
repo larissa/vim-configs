@@ -295,6 +295,12 @@ let g:SuperTabDefaultCompletionType = "context"
 let g:SuperTabContextDefaultCompletionType = "<c-p>"
 let g:SuperTabClosePreviewOnPopupClose = 1
 
+"Easy-align configuration
+"Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+"Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
 "Remap : to ç to make commands easier to type on brazilian keyboard
 nnoremap ç :
 vnoremap ç :
