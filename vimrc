@@ -127,7 +127,7 @@ let g:tagbar_autoclose = 1
 let g:tagbar_autofocus = 1
 
 "make <c-l> clear the highlight as well as redraw
-nnoremap <F1> :nohls<CR>:redraw!<CR>
+nnoremap <F9> :nohls<CR>:redraw!<CR>
 
 "make Y consistent with C and D
 nnoremap Y y$
@@ -181,7 +181,7 @@ nnoremap <silent> <Leader>l :BuffergatorToggle<CR>
 "key mapping for buffer navigation
 nnoremap <silent> <Tab> :bnext<CR>
 nnoremap <silent> <S-Tab> :bprevious<CR>
-nnoremap <silent> <C-Tab> :buffer#<CR>
+nnoremap <silent> <Space> :buffer#<CR>
 cnoreabbrev bx w<bar>bd
 
 "CtrlP stuff
