@@ -237,8 +237,8 @@ call <SID>X("Normal",		"cccccc",	"242424",	"none")
 call <SID>X("Cursor",		"222222",	"ecee90",	"none")
 call <SID>X("CursorLine",	"",			"32322e",	"none")
 call <SID>X("CursorColumn",	"",			"2d2d2d",	"")
+call <SID>X("Question",	"027b02",			"",	"bold")
 			"CursorIM
-			"Question
 			"IncSearch
 call <SID>X("Search",		"",	"5A647E",	"")
 call <SID>X("MatchParen",	"ecee90",	"857b6f",	"bold")
@@ -254,11 +254,11 @@ call <SID>X("StatusLineNC",	"857b6f",	"444444",	"none")
 			"Tooltip
 			"Menu
 			"WildMenu
-call <SID>X("Pmenu",		"f6f3e8",	"444444",	"")
-call <SID>X("PmenuSel",		"121212",	"caeb82",	"")
-call <SID>X("WarningMsg",	"ff0000",	"",			"")
-			"ErrorMsg
-			"ModeMsg
+call <SID>X("PMenu",		"f6f3e8",	"444444",	"")
+call <SID>X("PMenuSel",		"121212",	"caeb82",	"")
+call <SID>X("WarningMsg",	"ff5f55",	"",			"")
+call <SID>X("ErrorMsg",	"e3e0d7",	"ff0000",			"")
+call <SID>X("ModeMsg",	"cccccc",	"",			"bold")
 			"MoreMsg
 			"Directory
 			"DiffAdd
@@ -279,13 +279,21 @@ call <SID>X("Function",		"caeb82",	"",			"none")
 call <SID>X("PreProc",		"e5786d",	"",			"none")
 call <SID>X("Type",			"caeb82",	"",			"none")
 call <SID>X("Special",		"ffdead",	"",			"none")
-call <SID>X("Todo",			"857b6f",	"",			"italic")
+call <SID>X("Todo",			"857b6f",	"ffff00",			"italic")
+call <SID>X("Operator",		"cc764e",	"",			"none")
 			"Underlined
 			"Error
 			"Ignore
+"Diff
+call <SID>X("DiffText",			"",	"73186e",			"none")
+call <SID>X("DiffDelete",			"242424",	"3e3969",			"none")
+call <SID>X("DiffChange",			"",	"382a37",			"none")
+call <SID>X("DiffAdd",			"",	"2a0d6a",			"none")
+
 "Special case for theme to work better on terminal
 exec "hi SpellCap ctermfg=000 ctermbg=33"
 exec "hi SpellBad ctermfg=231 ctermbg=166"
+exec "hi SpellRare ctermbg=90"
 
 "Color of highlighted column
 exec "hi ColorColumn ctermbg=1"
