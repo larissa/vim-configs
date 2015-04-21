@@ -2,6 +2,7 @@
 This repo is used to manage my vim configuration. This setup is heavily based on akitaonrails' vimfiles.
 
 ## plugins
+* [ag-vim] (https://github.com/rking/ag.vim)
 * [auto-pairs] (http://www.vim.org/scripts/script.php?script_id=3599)
 * [CSApprox] (http://www.vim.org/scripts/script.php?script_id=2390)
 * [ctrp] (https://github.com/kien/ctrlp.vim)
