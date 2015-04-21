@@ -166,3 +166,6 @@
 [submodule "bundle/yankring"]
 	path = bundle/yankring
 	url = git@github.com:vimx/YankRing.vim.git
+[submodule "bundle/tagbar"]
+	path = bundle/tagbar
+	url = git@github.com:majutsushi/tagbar.git

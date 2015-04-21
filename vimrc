@@ -122,6 +122,10 @@ colorscheme wombat256custom
 
 silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
 
+silent! nmap <silent> <F12> :TagbarToggle<CR>
+let g:tagbar_autoclose = 1
+let g:tagbar_autofocus = 1
+
 "make <c-l> clear the highlight as well as redraw
 nnoremap <F1> :nohls<CR>:redraw!<CR>
 
