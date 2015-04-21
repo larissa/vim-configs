@@ -31,7 +31,9 @@ set hlsearch    "hilight searches by default
 
 set number      "add line numbers
 set wrap linebreak nolist
-set listchars=tab:▸\ ,eol:¬  "makes vim show invisible chars like TextMate
+set list listchars=tab:▸\ ,trail:·  "makes vim show invisible chars like TextMate
+
+set clipboard=unnamed " use the system clipboard
 
 "add some line space for easy reading
 set linespace=4
