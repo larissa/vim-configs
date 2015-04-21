@@ -18,13 +18,15 @@ This repo is used to manage my vim configuration. This setup is heavily based on
 * [matchit] (http://www.vim.org/scripts/script.php?script_id=39)
 * [NERDcommenter] (http://www.vim.org/scripts/script.php?script_id=1218)
 * [NERDtree] (http://www.vim.org/scripts/script.php?script_id=1658)
+* [NrrRgn] (https://github.com/chrisbra/NrrwRgn)
 * [rails] (http://www.vim.org/scripts/script.php?script_id=1567)
 * [scss-syntax] (https://github.com/cakebaker/scss-syntax.vim)
 * [snipmate] (http://www.vim.org/scripts/script.php?script_id=2540)
 * [supertab] (http://www.vim.org/scripts/script.php?script_id=1643)
 * [surround] (http://www.vim.org/scripts/script.php?script_id=1697)
 * [syntastic] (http://www.vim.org/scripts/script.php?script_id=2736)
-* [taglist] (http://www.vim.org/scripts/script.php?script_id=273)
+* [tagbar] (https://github.com/majutsushi/tagbar)
+* [tasklist] (https://github.com/vim-scripts/TaskList.vim)
 * [textile] (http://www.vim.org/scripts/script.php?script_id=2305)
 * [vim-airline] (https://github.com/bling/vim-airline)
 * [vim-buffergator] (http://www.vim.org/scripts/script.php?script_id=3619)
@@ -43,6 +45,7 @@ This repo is used to manage my vim configuration. This setup is heavily based on
 * [vim-textobj-user] (https://github.com/kana/vim-textobj-user)
 * [vim-vroom] (https://github.com/skalnik/vim-vroom)
 * [yankring] (https://github.com/vimx/YankRing.vim)
+* [ZoomWin] (https://github.com/vim-scripts/ZoomWin)
 
 ## installation
     git clone git://github.com/larissa/vim-configs.git ~/.vim
