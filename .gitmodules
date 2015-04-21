@@ -1,7 +1,3 @@
-[submodule "bundle/tabular"]
-	path = bundle/tabular
-	url = git://github.com/godlygeek/tabular.git
-        ignore = dirty
 [submodule "bundle/NERD_commenter"]
 	path = bundle/NERD_commenter
 	url = git://github.com/scrooloose/nerdcommenter.git
