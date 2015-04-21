@@ -40,7 +40,7 @@ This repo is used to manage my vim configuration. This setup is heavily based on
 * [vim-textobj-rubybloc] (http://vimcasts.org/blog/2010/12/a-text-object-for-ruby-blocks/)
 * [vim-textobj-user] (https://github.com/kana/vim-textobj-user)
 * [vim-vroom] (https://github.com/skalnik/vim-vroom)
-* [vim-yankring] (http://www.vim.org/scripts/script.php?script_id=1234)
+* [yankring] (https://github.com/vimx/YankRing.vim)
 
 ## installation
     git clone git://github.com/larissa/vim-configs.git ~/.vim

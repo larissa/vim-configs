@@ -163,3 +163,6 @@
 [submodule "bundle/ag-vim"]
 	path = bundle/ag-vim
 	url = git@github.com:rking/ag.vim.git
+[submodule "bundle/yankring"]
+	path = bundle/yankring
+	url = git@github.com:vimx/YankRing.vim.git
