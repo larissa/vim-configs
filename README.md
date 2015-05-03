@@ -28,6 +28,7 @@ This repo is used to manage my vim configuration. This setup is heavily based on
 * [tagbar] (https://github.com/majutsushi/tagbar)
 * [tasklist] (https://github.com/vim-scripts/TaskList.vim)
 * [textile] (http://www.vim.org/scripts/script.php?script_id=2305)
+* [unimpaired] (https://github.com/tpope/vim-unimpaired)
 * [vim-airline] (https://github.com/bling/vim-airline)
 * [vim-buffergator] (http://www.vim.org/scripts/script.php?script_id=3619)
 * [vim-bundler] (http://www.vim.org/scripts/script.php?script_id=4280)

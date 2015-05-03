@@ -175,3 +175,6 @@
 [submodule "bundle/zoomwin"]
 	path = bundle/zoomwin
 	url = git@github.com:vim-scripts/ZoomWin.git
+[submodule "bundle/unimpaired"]
+	path = bundle/unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git
