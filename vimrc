@@ -136,6 +136,9 @@ nnoremap Y y$
 nnoremap j gj
 nnoremap k gk
 
+"makes backspace similar to enter/+ and go to non-blank char from line upward
+nnoremap <BS> -
+
 "mark syntax errors with :signs
 let g:syntastic_enable_signs=1
 
@@ -183,6 +186,18 @@ nnoremap <silent> <Tab> :bnext<CR>
 nnoremap <silent> <S-Tab> :bprevious<CR>
 nnoremap <silent> <Space> :buffer#<CR>
 cnoreabbrev bx w<bar>bd
+
+"key mapping for split resize, also with submode plugin
+let g:submode_timeoutlen = 2000
+call submode#enter_with('resize-window', 'n', '', '<c-w>k', '<c-w>-')
+call submode#enter_with('resize-window', 'n', '', '<c-w>j', '<c-w>+')
+call submode#enter_with('resize-window', 'n', '', '<c-w>h', '<c-w>>')
+call submode#enter_with('resize-window', 'n', '', '<c-w>l', '<c-w><')
+call submode#map('resize-window', 'n', '', 'k', '<c-w>-')
+call submode#map('resize-window', 'n', '', 'j', '<c-w>+')
+call submode#map('resize-window', 'n', '', 'h', '<c-w>>')
+call submode#map('resize-window', 'n', '', 'l', '<c-w><')
+
 
 "CtrlP stuff
 "key mapping for buffer search
