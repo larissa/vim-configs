@@ -318,3 +318,7 @@ au BufRead,BufNewFile *.tex,*.txt,*.md,*.textile,*.markdown setlocal spell
 "Toggle language
 nnoremap <F7> :setlocal spell! spelllang=en<CR>
 nnoremap <F8> :setlocal spell! spelllang=pt<CR>
+
+"UltiSnips triggers
+let g:UltiSnipsJumpForwardTrigger="<c-n>"
+let g:UltiSnipsJumpBackwardTrigger="<c-p>"

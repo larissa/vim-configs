@@ -118,18 +118,6 @@
 	path = bundle/vim-vroom
 	url = git://github.com/skalnik/vim-vroom.git
         ignore = dirty
-[submodule "bundle/vim-snipmate"]
-	path = bundle/vim-snipmate
-	url = git://github.com/garbas/vim-snipmate.git
-        ignore = dirty
-[submodule "bundle/vim-addon-mw-utils"]
-	path = bundle/vim-addon-mw-utils
-	url = git://github.com/MarcWeber/vim-addon-mw-utils.git
-        ignore = dirty
-[submodule "bundle/tlib"]
-	path = bundle/tlib
-	url = git://github.com/tomtom/tlib_vim.git
-        ignore = dirty
 [submodule "bundle/snippets"]
 	path = bundle/snippets
 	url = git://github.com/honza/vim-snippets.git
@@ -178,3 +166,6 @@
 [submodule "bundle/unimpaired"]
 	path = bundle/unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
+[submodule "bundle/ultisnips"]
+	path = bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
