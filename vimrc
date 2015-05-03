@@ -187,6 +187,12 @@ nnoremap <silent> <S-Tab> :bprevious<CR>
 nnoremap <silent> <Space> :buffer#<CR>
 cnoreabbrev bx w<bar>bd
 
+"key mapping for splits navigation
+nnoremap <silent> <c-h> :wincmd h<cr>
+nnoremap <silent> <c-j> :wincmd j<cr>
+nnoremap <silent> <c-k> :wincmd k<cr>
+nnoremap <silent> <c-l> :wincmd l<cr>
+nnoremap <silent> <c-\> :wincmd p<cr>
 "key mapping for split resize, also with submode plugin
 let g:submode_timeoutlen = 2000
 call submode#enter_with('resize-window', 'n', '', '<c-w>k', '<c-w>-')
@@ -198,6 +204,8 @@ call submode#map('resize-window', 'n', '', 'j', '<c-w>+')
 call submode#map('resize-window', 'n', '', 'h', '<c-w>>')
 call submode#map('resize-window', 'n', '', 'l', '<c-w><')
 
+"uses ctrl-w z for zoom window so it's similar to tmux
+nmap <c-w>z <Plug>ZoomWin
 
 "CtrlP stuff
 "key mapping for buffer search
