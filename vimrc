@@ -129,6 +129,10 @@ let g:tagbar_autofocus = 1
 "make <c-l> clear the highlight as well as redraw
 nnoremap <F9> :nohls<CR>:redraw!<CR>
 
+"make Y consistent with C and D on yankring
+function! YRRunAfterMaps()
+  nnoremap <silent> Y   :<C-U>YRYankCount 'y$'<CR>
+endfunction
 "make Y consistent with C and D
 nnoremap Y y$
 
