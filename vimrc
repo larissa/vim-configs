@@ -43,6 +43,7 @@ set visualbell t_vb=
 
 "setting format options to automatically wrap line larger than tw
 set formatoptions=lt
+set tw=80
 
 "statusline setup
 set statusline=%f       "tail of the filename
