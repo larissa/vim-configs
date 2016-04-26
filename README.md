@@ -51,16 +51,16 @@ This repo is used to manage my vim configuration. This setup is heavily based on
 ## installation
     git clone git://github.com/larissa/vim-configs.git ~/.vim
     cd ~/.vim
-    git submodule update --init
     ln -s ~/.vim/vimrc ~/.vimrc
     ln -s ~/.vim/gvimrc ~/.gvimrc
+    git clone https://github.com/VundleVim/Vundle.vim.git bundle/Vundle.vim
 
 at first usage, execute
-    :call pathogen#helptags()
+    :BundleInstall
 
 ## debian dependencies
     apt-get install exuberant-ctags ncurses-term
 
 ## credits
 * Plugins belong to their authors.
-* Credit for most of the vimrc goes to @akitaonrails. 
+* Credit for much of the vimrc goes to @akitaonrails.
