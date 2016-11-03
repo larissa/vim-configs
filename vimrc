@@ -393,6 +393,14 @@ nmap ga <Plug>(EasyAlign)
 nnoremap ç :
 vnoremap ç :
 
+"Remap : to ; to make commands easier to type on american keyboard
+nnoremap ; :
+vnoremap ; :
+
+"Regain ; functionality by mapping it to :
+nnoremap : ;
+vnoremap : ;
+
 "Highlight column number 80
 set colorcolumn=81
 highlight ColorColumn ctermbg=1
