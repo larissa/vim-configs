@@ -65,6 +65,7 @@ Plugin 'vim-scripts/ZoomWin'
 Plugin 'vim-scripts/TaskList.vim'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'vim-scripts/CSApprox'
+Plugin 'editorconfig/editorconfig-vim'
 
 "All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -106,6 +107,9 @@ set statusline=%f       "tail of the filename
 
 "Git
 set statusline+=%{fugitive#statusline()}
+
+"EditorConfig
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
 "RVM
 set statusline+=%{exists('g:loaded_rvm')?rvm#statusline():''}
