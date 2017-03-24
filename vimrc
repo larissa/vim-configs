@@ -60,7 +60,6 @@ Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'kana/vim-textobj-user'
 Plugin 'skalnik/vim-vroom'
 Plugin 'mattn/webapi-vim'
-Plugin 'vimx/YankRing.vim'
 Plugin 'vim-scripts/ZoomWin'
 Plugin 'vim-scripts/TaskList.vim'
 Plugin 'vim-scripts/matchit.zip'
@@ -190,10 +189,6 @@ let g:tagbar_autofocus = 1
 "make <c-l> clear the highlight as well as redraw
 nnoremap <F9> :nohls<CR>:redraw!<CR>
 
-"make Y consistent with C and D on yankring
-function! YRRunAfterMaps()
-  nnoremap <silent> Y   :<C-U>YRYankCount 'y$'<CR>
-endfunction
 "make Y consistent with C and D
 nnoremap Y y$
 
@@ -287,9 +282,6 @@ autocmd FileType c setlocal sts=4 sw=4
 
 " some python stuff
 au FileType python syn keyword pythonDecorator True None False self
-
-"change yankring directory
-let g:yankring_history_dir = '$HOME/.vim/'
 
 "use vim-rooter manually
 let g:rooter_manual_only = 1
