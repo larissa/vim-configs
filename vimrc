@@ -275,7 +275,6 @@ let g:ctrlp_map = '<Leader>f'
 
 "indent settings for specific filetypes
 autocmd FileType python setlocal softtabstop=4 shiftwidth=4
-autocmd FileType javascript setlocal sts=4 sw=4
 autocmd FileType nasm setlocal sts=4 sw=4
 autocmd FileType cpp setlocal sts=4 sw=4
 autocmd FileType c setlocal sts=4 sw=4
