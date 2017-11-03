@@ -68,6 +68,7 @@ Plugin 'editorconfig/editorconfig-vim'
 
 "All of your Plugins must be added before the following line
 call vundle#end()            " required
+"load ftplugins and indent files
 filetype plugin indent on    " required
 
 "allow backspacing over everything in insert mode
@@ -138,10 +139,6 @@ set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
 set scrolloff=3
 set sidescrolloff=7
 set sidescroll=1
-
-"load ftplugins and indent files
-filetype plugin on
-filetype indent on
 
 "turn on syntax highlighting
 syntax on
