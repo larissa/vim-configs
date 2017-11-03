@@ -264,6 +264,9 @@ call submode#map('resize-window', 'n', '', 'l', '<c-w><')
 "uses ctrl-w z for zoom window so it's similar to tmux
 nmap <c-w>z <Plug>ZoomWin
 
+"ruby indent configuration
+let g:ruby_indent_assignment_style = 'variable'
+
 "CtrlP stuff
 "key mapping for buffer search
 nnoremap <silent> <Leader>b :CtrlPBuffer<CR>
