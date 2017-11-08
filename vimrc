@@ -65,6 +65,8 @@ Plugin 'vim-scripts/TaskList.vim'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'vim-scripts/CSApprox'
 Plugin 'editorconfig/editorconfig-vim'
+"setup only for neovim
+Plugin 'Shougo/deoplete.nvim'
 
 "All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -412,3 +414,8 @@ nnoremap <F8> :setlocal spell! spelllang=pt<CR>
 "UltiSnips triggers
 let g:UltiSnipsJumpForwardTrigger="<c-n>"
 let g:UltiSnipsJumpBackwardTrigger="<c-p>"
+
+"loads deoplete only on neovim
+if has('nvim')
+  let g:deoplete#enable_at_startup = 1
+endif
