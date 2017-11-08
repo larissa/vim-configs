@@ -145,7 +145,9 @@ syntax on
 
 "some stuff to get the mouse going in term
 set mouse=a
-set ttymouse=xterm2
+if !has('nvim')
+  set ttymouse=xterm2
+endif
 
 "hide buffers when not displayed
 set hidden
@@ -154,9 +156,9 @@ set hidden
 autocmd! bufwritepost .vimrc source %
 
 "tell the term has 256 colors
-set t_Co=256
-if has("gui_running")
-
+if !has('nvim')
+  set t_Co=256
+  if has("gui_running")
     set guitablabel=%M%t
 
     if has("gui_gnome") || has("gui_gtk")
@@ -170,10 +172,11 @@ if has("gui_running")
         set guifont=Consolas:h12
         set enc=utf-8
     endif
-else
+  else
     set term=gnome-256color
     "disables Background Color Erase so theme works on tmux -2
     set t_ut=
+  endif
 endif
 colorscheme wombat256custom
 
