@@ -67,6 +67,7 @@ Plugin 'vim-scripts/CSApprox'
 Plugin 'editorconfig/editorconfig-vim'
 "setup only for neovim
 Plugin 'Shougo/deoplete.nvim'
+Plugin 'Shougo/deoplete-rct'
 
 "All of your Plugins must be added before the following line
 call vundle#end()            " required

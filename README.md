@@ -72,6 +72,9 @@ at first usage, execute
 at first usage, execute
     :UpdateRemotePlugins
 
+Note: You need to have the gem rcodetools installed globally, so rct-complete
+command is available
+
 ## credits
 * Plugins belong to their authors.
 * Credit for much of the vimrc goes to @akitaonrails.
