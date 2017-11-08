@@ -47,6 +47,7 @@ This repo is used to manage my vim configuration. This setup is heavily based on
 * [vim-vroom] (https://github.com/skalnik/vim-vroom)
 * [yankring] (https://github.com/vimx/YankRing.vim)
 * [ZoomWin] (https://github.com/vim-scripts/ZoomWin)
+* [deoplete.nvim] (https://github.com/Shougo/deoplete.nvim)
 
 ## installation
     git clone git://github.com/larissa/vim-configs.git ~/.vim
@@ -60,6 +61,16 @@ at first usage, execute
 
 ## debian dependencies
     apt-get install exuberant-ctags ncurses-term
+
+## Using neovim
+    apt-get install neovim python3-pip python-pip ruby-neovim
+    pip install neovim
+    pip3 install neovim
+    mkdir ~/.config/nvim/
+    ln -s ~/.vim/init.vim ~/.config/nvim/init.vim
+
+at first usage, execute
+    :UpdateRemotePlugins
 
 ## credits
 * Plugins belong to their authors.
