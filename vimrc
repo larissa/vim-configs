@@ -67,7 +67,9 @@ Plugin 'vim-scripts/CSApprox'
 Plugin 'editorconfig/editorconfig-vim'
 "setup only for neovim
 Plugin 'Shougo/deoplete.nvim'
-Plugin 'Shougo/deoplete-rct'
+Plugin 'Shougo/deoplete-rct' "ruby
+Plugin 'carlitux/deoplete-ternjs' "javascript
+Plugin 'zchee/deoplete-jedi' "python
 
 "All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -419,4 +421,9 @@ let g:UltiSnipsJumpBackwardTrigger="<c-p>"
 "loads deoplete only on neovim
 if has('nvim')
   let g:deoplete#enable_at_startup = 1
+  " closes preview window when completion is done
+  autocmd CompleteDone * pclose!
+  " config for javascript completion
+  let g:deoplete#sources#ternjs#types = 1
+  let g:deoplete#sources#ternjs#docs = 1
 endif

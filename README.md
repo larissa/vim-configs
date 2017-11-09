@@ -63,7 +63,7 @@ at first usage, execute
     apt-get install exuberant-ctags ncurses-term
 
 ## Using neovim
-    apt-get install neovim python3-pip python-pip ruby-neovim
+    apt-get install neovim python3-pip python-pip ruby-neovim python-jedi python3-jedi
     pip install neovim
     pip3 install neovim
     mkdir ~/.config/nvim/
@@ -72,8 +72,9 @@ at first usage, execute
 at first usage, execute
     :UpdateRemotePlugins
 
-Note: You need to have the gem rcodetools installed globally, so rct-complete
-command is available
+Note: You need to have the gem `rcodetools` installed globally, so `rct-complete`
+command is available for ruby completion. You will also need the npm package
+`tern` for javascript autocomplete.
 
 ## credits
 * Plugins belong to their authors.
