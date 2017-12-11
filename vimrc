@@ -208,8 +208,9 @@ nnoremap k gk
 nnoremap <BS> -
 
 "Lint configuration
-let g:ale_sign_error = '●' " Less aggressive than the default '>>'
+let g:ale_sign_error = '●'
 let g:ale_sign_warning = '.'
+let g:ale_lint_on_text_changed = 'never' " Otherwise linting is too distracting
 
 "jump to last cursor position when opening a file
 "dont do it when writing a commit log entry
