@@ -65,6 +65,7 @@ Plugin 'vim-scripts/TaskList.vim'
 Plugin 'vim-scripts/matchit.zip'
 Plugin 'vim-scripts/CSApprox'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'posva/vim-vue'
 "setup only for neovim
 Plugin 'Shougo/deoplete.nvim'
 Plugin 'Shougo/deoplete-rct' "ruby
@@ -413,6 +414,10 @@ au BufRead,BufNewFile *.tex,*.txt,*.md,*.textile,*.markdown setlocal spell
 "Toggle language
 nnoremap <F7> :setlocal spell! spelllang=en<CR>
 nnoremap <F8> :setlocal spell! spelllang=pt<CR>
+
+"Vue config
+"use html, javascript and css configs on vue component files
+autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 
 "UltiSnips triggers
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
