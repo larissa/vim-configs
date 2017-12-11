@@ -66,6 +66,8 @@ Plugin 'vim-scripts/matchit.zip'
 Plugin 'vim-scripts/CSApprox'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'posva/vim-vue'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 "setup only for neovim
 Plugin 'Shougo/deoplete.nvim'
 Plugin 'Shougo/deoplete-rct' "ruby
@@ -235,6 +237,9 @@ let g:user_emmet_settings = {
   \  },
   \  'erb' : {
   \    'extends' : 'html',
+  \  },
+  \  'javascript.jsx' : {
+  \    'extends' : 'jsx',
   \  },
  \}
 "change default emmet leading key
