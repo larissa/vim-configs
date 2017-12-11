@@ -24,7 +24,7 @@ This repo is used to manage my vim configuration. This setup is heavily based on
 * [snipmate] (http://www.vim.org/scripts/script.php?script_id=2540)
 * [supertab] (http://www.vim.org/scripts/script.php?script_id=1643)
 * [surround] (http://www.vim.org/scripts/script.php?script_id=1697)
-* [syntastic] (http://www.vim.org/scripts/script.php?script_id=2736)
+* [ale] (https://github.com/w0rp/ale)
 * [tagbar] (https://github.com/majutsushi/tagbar)
 * [tasklist] (https://github.com/vim-scripts/TaskList.vim)
 * [textile] (http://www.vim.org/scripts/script.php?script_id=2305)
@@ -75,6 +75,14 @@ at first usage, execute
 Note: You need to have the gem `rcodetools` installed globally, so `rct-complete`
 command is available for ruby completion. You will also need the npm package
 `tern` for javascript autocomplete.
+
+## Linters
+
+You can use any linter supported by [ale] (https://github.com/w0rp/ale)
+
+    # if you prefer, use apt-get install instead
+    rvm @global do gem install rubocop
+    npm i -g eslint eslint-plugin-vue babel-eslint eslint-plugin-react
 
 ## credits
 * Plugins belong to their authors.
