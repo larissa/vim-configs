@@ -83,6 +83,7 @@ You can use any linter supported by [ale] (https://github.com/w0rp/ale)
     # if you prefer, use apt-get install instead
     rvm @global do gem install rubocop
     npm i -g eslint eslint-plugin-vue babel-eslint eslint-plugin-react
+    npm i -g stylelint stylelint-scss
 
 ## credits
 * Plugins belong to their authors.
