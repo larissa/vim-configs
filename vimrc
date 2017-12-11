@@ -36,7 +36,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'kana/vim-submode'
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-surround'
-Plugin 'scrooloose/syntastic'
+Plugin 'w0rp/ale'
 Plugin 'majutsushi/tagbar'
 Plugin 'timcharper/textile.vim'
 Plugin 'SirVer/ultisnips'
@@ -205,8 +205,9 @@ nnoremap k gk
 "makes backspace similar to enter/+ and go to non-blank char from line upward
 nnoremap <BS> -
 
-"mark syntax errors with :signs
-let g:syntastic_enable_signs=1
+"Lint configuration
+let g:ale_sign_error = '●' " Less aggressive than the default '>>'
+let g:ale_sign_warning = '.'
 
 "jump to last cursor position when opening a file
 "dont do it when writing a commit log entry
