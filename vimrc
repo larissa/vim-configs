@@ -209,7 +209,7 @@ nnoremap <BS> -
 
 "Lint configuration
 let g:ale_sign_error = '●'
-let g:ale_sign_warning = '.'
+let g:ale_sign_warning = '•'
 let g:ale_lint_on_text_changed = 'never' " Otherwise linting is too distracting
 " show error details with \d[etails]
 nnoremap <Leader>d :ALEDetail<CR>
