@@ -386,6 +386,9 @@ set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
 "Ignore some files in NERDTree
 let NERDTreeIgnore = ['\.pyc$','\~$']
 
+"Add space around comment delimiters on NERDCommenter
+let NERDSpaceDelims = 1
+
 "SuperTab configuration
 "uses context completion type and falls back to keywork if none found
 let g:SuperTabDefaultCompletionType = "context"
