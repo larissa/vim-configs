@@ -107,7 +107,7 @@ set linespace=4
 set visualbell t_vb=
 
 "setting format options to automatically wrap line larger than tw
-set formatoptions=lt
+set formatoptions=ltj
 set tw=80
 
 "statusline setup
