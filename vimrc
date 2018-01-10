@@ -188,9 +188,11 @@ if !has('nvim')
 endif
 colorscheme wombat256custom
 
-silent! nmap <silent> <Leader>p :NERDTreeToggle<CR>
+" Toggle directory view
+nnoremap <Leader>d :NERDTreeToggle<CR>
 
-silent! nmap <silent> <F12> :TagbarToggle<CR>
+" Toggle g[o] to navigation
+nnoremap <silent> <Leader>g :TagbarToggle<CR>
 let g:tagbar_autoclose = 1
 let g:tagbar_autofocus = 1
 
@@ -211,8 +213,8 @@ nnoremap <BS> -
 let g:ale_sign_error = '●'
 let g:ale_sign_warning = '•'
 let g:ale_lint_on_text_changed = 'never' " Otherwise linting is too distracting
-" show error details with \d[etails]
-nnoremap <Leader>d :ALEDetail<CR>
+" show error details with \m[ore details]
+nnoremap <Leader>m :ALEDetail<CR>
 
 "jump to last cursor position when opening a file
 "dont do it when writing a commit log entry
@@ -444,3 +446,6 @@ if has('nvim')
   let g:deoplete#sources#ternjs#types = 1
   let g:deoplete#sources#ternjs#docs = 1
 endif
+
+"Enter paste mode, add new line, paste, leave paste mode
+nnoremap <silent> <Leader>p :set paste<CR>o<esc>"*]p:set nopaste<CR>
