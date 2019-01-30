@@ -68,6 +68,7 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'posva/vim-vue'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'thaerkh/vim-indentguides'
 "setup only for neovim
 Plugin 'Shougo/deoplete.nvim'
 Plugin 'Shougo/deoplete-rct' "ruby
