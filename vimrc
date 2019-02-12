@@ -408,6 +408,12 @@ vmap <Enter> <Plug>(EasyAlign)
 "Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
+"Swap lines
+nnoremap <silent>K <Up>"add"ap<Up>
+nnoremap <silent>J "add"ap
+"Regain J functionality of joining lines by mapping it to Q
+nnoremap Q J
+
 "Remap : to ç to make commands easier to type on brazilian keyboard
 nnoremap ç :
 vnoremap ç :
