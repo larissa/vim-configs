@@ -34,7 +34,6 @@ Plugin 'tpope/vim-rails'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'honza/vim-snippets'
 Plugin 'kana/vim-submode'
-Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-surround'
 Plugin 'w0rp/ale'
 Plugin 'majutsushi/tagbar'
@@ -70,10 +69,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'thaerkh/vim-indentguides'
 "setup only for neovim
-Plugin 'Shougo/deoplete.nvim'
-Plugin 'Shougo/deoplete-rct' "ruby
-Plugin 'carlitux/deoplete-ternjs' "javascript
-Plugin 'zchee/deoplete-jedi' "python
+Plugin 'neoclide/coc.nvim'
 
 "All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -392,15 +388,34 @@ let NERDTreeIgnore = ['\.pyc$','\~$']
 "Add space around comment delimiters on NERDCommenter
 let NERDSpaceDelims = 1
 
-"SuperTab configuration
-"uses context completion type and falls back to keywork if none found
-let g:SuperTabDefaultCompletionType = "context"
-  autocmd FileType *
-    \ if &omnifunc != '' |
-    \   call SuperTabChain(&omnifunc, "<c-p>") |
-    \ endif
-let g:SuperTabContextDefaultCompletionType = "<c-p>"
-let g:SuperTabClosePreviewOnPopupClose = 1
+"Expand snippets with C-space by default so it doesn't override other mappings
+let g:UltiSnipsExpandTrigger="<c-space>"
+
+"coc.nvim completion configuration
+" close preview window when completion is done.
+autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+" use s-tab to navigate between completion list
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" use <tab> for trigger completion and navigate to the next complete item
+function! g:TabActionBasedOnContext()
+  " if there is an autocomplete list, go to the next item
+  if pumvisible()
+    return "\<C-n>"
+  endif
+  " if there is whitespace behind the current column, insert a tab character
+  let col = col('.') - 1
+  if !col || getline('.')[col - 1] =~ '\s'
+    return "\<Tab>"
+  endif
+  " if snippet was successful, does nothing
+  call UltiSnips#ExpandSnippet()
+  if g:ulti_expand_res > 0
+    return ""
+  endif
+  " start looking for autocomplete
+  return coc#refresh()
+endfunction
+inoremap <silent> <Tab> <C-R>=g:TabActionBasedOnContext()<CR>
 
 "Easy-align configuration
 "Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
@@ -440,18 +455,8 @@ nnoremap <F8> :setlocal spell! spelllang=pt<CR>
 "use html, javascript and css configs on vue component files
 autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 
-"UltiSnips triggers
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
-
-"loads deoplete only on neovim
+"setup only on neovim
 if has('nvim')
-  let g:deoplete#enable_at_startup = 1
-  " closes preview window when completion is done
-  autocmd CompleteDone * pclose!
-  " config for javascript completion
-  let g:deoplete#sources#ternjs#types = 1
-  let g:deoplete#sources#ternjs#docs = 1
 endif
 
 "Enter paste mode, add new line, paste, leave paste mode
