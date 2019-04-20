@@ -32,6 +32,7 @@ Plugin 'tpope/vim-markdown'
 Plugin 'chrisbra/NrrwRgn'
 Plugin 'tpope/vim-rails'
 Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'leafgarland/typescript-vim'
 Plugin 'honza/vim-snippets'
 Plugin 'kana/vim-submode'
 Plugin 'tpope/vim-surround'
@@ -454,6 +455,9 @@ nnoremap <F8> :setlocal spell! spelllang=pt<CR>
 "Vue config
 "use html, javascript and css configs on vue component files
 autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
+
+"tsx
+autocmd BufRead,BufNewFile *.tsx setlocal filetype=typescript.jsx
 
 "setup only on neovim
 if has('nvim')
