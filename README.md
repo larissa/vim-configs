@@ -22,7 +22,6 @@ This repo is used to manage my vim configuration. This setup is heavily based on
 * [rails] (http://www.vim.org/scripts/script.php?script_id=1567)
 * [scss-syntax] (https://github.com/cakebaker/scss-syntax.vim)
 * [snipmate] (http://www.vim.org/scripts/script.php?script_id=2540)
-* [supertab] (http://www.vim.org/scripts/script.php?script_id=1643)
 * [surround] (http://www.vim.org/scripts/script.php?script_id=1697)
 * [ale] (https://github.com/w0rp/ale)
 * [tagbar] (https://github.com/majutsushi/tagbar)
@@ -47,7 +46,7 @@ This repo is used to manage my vim configuration. This setup is heavily based on
 * [vim-vroom] (https://github.com/skalnik/vim-vroom)
 * [yankring] (https://github.com/vimx/YankRing.vim)
 * [ZoomWin] (https://github.com/vim-scripts/ZoomWin)
-* [deoplete.nvim] (https://github.com/Shougo/deoplete.nvim)
+* [coc.nvim] (https://github.com/neoclide/coc.nvim)
 
 ## installation
     git clone git://github.com/larissa/vim-configs.git ~/.vim
@@ -63,7 +62,7 @@ at first usage, execute
     apt-get install exuberant-ctags ncurses-term
 
 ## Using neovim
-    apt-get install neovim python3-pip python-pip ruby-neovim python-jedi python3-jedi
+    apt-get install neovim python3-pip python-pip ruby-neovim
     pip install neovim
     pip3 install neovim
     mkdir ~/.config/nvim/
@@ -72,9 +71,8 @@ at first usage, execute
 at first usage, execute
     :UpdateRemotePlugins
 
-Note: You need to have the gem `rcodetools` installed globally, so `rct-complete`
-command is available for ruby completion. You will also need the npm package
-`tern` for javascript autocomplete.
+Note: You need to have the gem `solargraph` installed globally for ruby
+completion.
 
 ## Linters
 
@@ -82,8 +80,8 @@ You can use any linter supported by [ale] (https://github.com/w0rp/ale)
 
     # if you prefer, use apt-get install instead
     rvm @global do gem install rubocop
-    npm i -g eslint eslint-plugin-vue babel-eslint eslint-plugin-react
-    npm i -g stylelint stylelint-scss
+    yarn global add eslint eslint-plugin-vue babel-eslint eslint-plugin-react
+    yarn global add stylelint stylelint-scss
 
 ## credits
 * Plugins belong to their authors.
