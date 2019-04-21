@@ -55,6 +55,8 @@ This repo is used to manage my vim configuration. This setup is heavily based on
     ln -s ~/.vim/gvimrc ~/.gvimrc
     git clone https://github.com/VundleVim/Vundle.vim.git bundle/Vundle.vim
 
+Some plugins have yarn and nodejs as dependencies.
+
 at first usage, execute
     :BundleInstall
 
@@ -70,6 +72,8 @@ at first usage, execute
 
 at first usage, execute
     :UpdateRemotePlugins
+    :call coc#util#install()
+    :CocInstall coc-json coc-solargraph coc-tsserver coc-css
 
 Note: You need to have the gem `solargraph` installed globally for ruby
 completion.
