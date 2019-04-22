@@ -66,7 +66,6 @@ Plugin 'posva/vim-vue'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'thaerkh/vim-indentguides'
-"setup only for neovim
 Plugin 'neoclide/coc.nvim'
 
 "All of your Plugins must be added before the following line

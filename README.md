@@ -1,5 +1,10 @@
-# vim-configs
-This repo is used to manage my vim configuration. This setup is heavily based on akitaonrails' vimfiles.
+# (N)Vim configuration
+
+This repository is used to manage my own personal (neo)vim configuration. If
+you're using vim, this setup should still work`*`, but the install script
+installs neovim by default.
+
+`*` take a look at the coc.nvim plugin page for vim instructions
 
 ## plugins
 * [ag-vim] (https://github.com/rking/ag.vim)
@@ -48,45 +53,11 @@ This repo is used to manage my vim configuration. This setup is heavily based on
 * [ZoomWin] (https://github.com/vim-scripts/ZoomWin)
 * [coc.nvim] (https://github.com/neoclide/coc.nvim)
 
-## installation
+## Installation (Debian/Ubuntu or MacOS)
+
     git clone git://github.com/larissa/vim-configs.git ~/.vim
     cd ~/.vim
-    ln -s ~/.vim/vimrc ~/.vimrc
-    ln -s ~/.vim/gvimrc ~/.gvimrc
-    git clone https://github.com/VundleVim/Vundle.vim.git bundle/Vundle.vim
+    ./install.sh
 
-Some plugins have yarn and nodejs as dependencies.
-
-at first usage, execute
-    :BundleInstall
-
-## debian dependencies
-    apt-get install exuberant-ctags ncurses-term
-
-## Using neovim
-    apt-get install neovim python3-pip python-pip ruby-neovim
-    pip install neovim
-    pip3 install neovim
-    mkdir ~/.config/nvim/
-    ln -s ~/.vim/init.vim ~/.config/nvim/init.vim
-
-at first usage, execute
-    :UpdateRemotePlugins
-    :call coc#util#install()
-    :CocInstall coc-json coc-solargraph coc-tsserver coc-css
-
-Note: You need to have the gem `solargraph` installed globally for ruby
-completion.
-
-## Linters
-
-You can use any linter supported by [ale] (https://github.com/w0rp/ale)
-
-    # if you prefer, use apt-get install instead
-    rvm @global do gem install rubocop
-    yarn global add eslint eslint-plugin-vue babel-eslint eslint-plugin-react
-    yarn global add stylelint stylelint-scss
-
-## credits
+## Credits
 * Plugins belong to their authors.
-* Credit for much of the vimrc goes to @akitaonrails.
