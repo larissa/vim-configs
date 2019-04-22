@@ -30,7 +30,7 @@ then
   then
     rvm @global do gem install neovim
   else
-    gem install neovim
+    sudo gem install neovim
   fi
 
   echo "---------------------------------------------------------"
@@ -77,7 +77,7 @@ else
   echo "$(tput setaf 2)Installing Ruby neovim package.$(tput sgr 0)"
   echo "---------------------------------------------------------"
 
-  gem install neovim
+  sudo gem install neovim
 
   echo "---------------------------------------------------------"
   echo "$(tput setaf 2)Installing Python neovim package.$(tput sgr 0)"
@@ -131,7 +131,7 @@ if [ $? -eq 0 ]
 then
   rvm @global do gem install solargraph
 else
-  gem install solargraph
+  sudo gem install solargraph
 fi
 
 nvim +'CocInstall coc-json' +qall
@@ -146,7 +146,7 @@ if [ $? -eq 0 ]
 then
   rvm @global do gem install rubocop
 else
-  gem install rubocop
+  sudo gem install rubocop
 fi
 
 yarn global add eslint eslint-plugin-vue babel-eslint eslint-plugin-react
