@@ -118,7 +118,7 @@ echo "---------------------------------------------------------"
 
 cd ~/.vim
 git clone https://github.com/VundleVim/Vundle.vim.git bundle/Vundle.vim
-nvim +BundleInstall +qall
+nvim +PluginInstall +qall
 nvim +UpdateRemotePlugins +qall
 nvim +'call coc#util#install()' +qall
 
