@@ -26,6 +26,9 @@ set hlsearch
 
 " add line numbers
 set number
+" use relative number for easier relative navigation
+set relativenumber
+" wrap lines
 set wrap linebreak nolist
 
 " makes vim show invisible chars
