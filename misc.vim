@@ -118,7 +118,7 @@ if !has('nvim')
     set t_ut=
   endif
 endif
-colorscheme wombat256custom
+colorscheme wombat256
 
 " jump to last cursor position when opening a file
 " dont do it when writing a commit log entry
