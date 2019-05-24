@@ -25,8 +25,9 @@ let g:tagbar_autofocus = 1
 " customize linter signs
 let g:ale_sign_error = '●'
 let g:ale_sign_warning = '•'
-" only lint when buffer opened or saved, otherwise linting is too distracting
-let g:ale_lint_on_text_changed = 'never'
+" only lint when leaving insert mode after an edit
+let g:ale_lint_on_text_changed = 'normal'
+let g:ale_lint_on_insert_leave = 1
 " show error details with m[ore details]
 nnoremap <Leader>m :ALEDetail<CR>
 
