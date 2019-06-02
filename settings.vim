@@ -31,29 +31,6 @@ let g:ale_lint_on_insert_leave = 1
 " show error details with m[ore details]
 nnoremap <Leader>m :ALEDetail<CR>
 
-" Emmet
-" enable emmet for multiple types per filetype
-let g:user_emmet_settings = {
-  \  'php' : {
-  \    'extends' : 'html',
-  \    'filters' : 'c',
-  \  },
-  \  'xml' : {
-  \    'extends' : 'html',
-  \  },
-  \  'haml' : {
-  \    'extends' : 'html',
-  \  },
-  \  'erb' : {
-  \    'extends' : 'html',
-  \  },
-  \  'javascript.jsx' : {
-  \    'extends' : 'jsx',
-  \  },
- \}
-" change default emmet leading key, h[tml]
-let g:user_emmet_leader_key = '<Leader>h'
-
 " Buffergator
 let g:buffergator_viewport_split_policy = "B"
 let g:buffergator_autoexpand_on_split = 0
@@ -73,10 +50,6 @@ call submode#map('resize-window', 'n', '', 'k', '<c-w>-')
 call submode#map('resize-window', 'n', '', 'j', '<c-w>+')
 call submode#map('resize-window', 'n', '', 'h', '<c-w>>')
 call submode#map('resize-window', 'n', '', 'l', '<c-w><')
-
-" ZoomWin
-" uses ctrl-w z for zoom window so it's similar to tmux
-nmap <c-w>z <Plug>ZoomWin
 
 " ruby-indent
 let g:ruby_indent_assignment_style = 'variable'
