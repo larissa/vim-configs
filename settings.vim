@@ -7,7 +7,9 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
 " NERDTree
 " toggle directory view
-nnoremap <Leader>d :NERDTreeToggle<CR>
+nnoremap <silent> <Leader>d :NERDTreeToggle<CR>
+" reveal current file in directory tree
+nnoremap <silent> <Leader>r :NERDTreeFind<CR>
 " ignore some files
 let NERDTreeIgnore = ['\.pyc$','\~$']
 
