@@ -35,7 +35,7 @@ set wrap linebreak nolist
 set list listchars=tab:▸\ ,trail:·,nbsp:¬
 
 " use the system clipboard
-set clipboard=unnamed
+set clipboard=unnamedplus
 
 " add some line space for easy reading
 set linespace=4
