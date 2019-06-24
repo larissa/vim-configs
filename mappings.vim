@@ -60,6 +60,18 @@ nnoremap <silent> <F5> :call Preserve("%s/\\s\\+$//e")<CR>
 " indent whole file
 nnoremap <silent> <F6> :call Preserve("normal gg=G")<CR>
 
+" open buffer for quick note taking. buffer is deleted when closed
+nnoremap <silent> <Leader>q :call OpenScratchBuffer()<CR>
+function! OpenScratchBuffer()
+  if exists("b:scratch_window")
+    exe "quit"
+  else
+    exe 'new scratch'
+    setlocal buftype=nofile bufhidden=delete noswapfile nobuflisted
+    let b:scratch_window = 1
+  endif
+endfunction
+
 " training stuff
 nnoremap <up> <nop>
 nnoremap <down> <nop>

@@ -132,7 +132,7 @@ function! SetCursorPosition()
       exe "normal! g`\""
       normal! zz
     endif
-  end
+  endif
 endfunction
 
 " highlight column number 80
