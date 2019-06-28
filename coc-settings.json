@@ -6,5 +6,6 @@
   "diagnostic.errorSign": "●",
   "diagnostic.warningSign": "•",
   "diagnostic.hintSign": "!",
-  "diagnostic.infoSign": "!"
+  "diagnostic.infoSign": "!",
+  "solargraph.checkGemVersion": false
 }
