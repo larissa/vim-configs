@@ -20,6 +20,9 @@ nnoremap <silent> <leader>d :bp<bar>bd#<CR>
 nnoremap <silent> <leader>x :w<bar>bp<bar>bd#<CR>
 cnoreabbrev bx w<bar>bd
 
+" map save file to <leader>s
+nnoremap <leader>s :w<CR>
+
 " key mapping for splits navigation
 nnoremap <silent> <c-h> :wincmd h<cr>
 nnoremap <silent> <c-j> :wincmd j<cr>
@@ -29,9 +32,6 @@ nnoremap <silent> <c-\> :wincmd p<cr>
 
 " change local directory to match current file
 nnoremap <silent> <Leader>cd :cd %:h<CR>
-
-" map save file to ctrl-s
-nnoremap <c-s> :w<CR>
 
 "fix mistype :W and :Q
 command! -bang -range=% -complete=file -nargs=* WQ <line1>,<line2>wq<bang> <args>
