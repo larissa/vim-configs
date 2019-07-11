@@ -14,7 +14,7 @@ Plugin 'VundleVim/Vundle.vim'
 "Plugins
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
-Plugin 'rking/ag.vim'
+Plugin 'jremmen/vim-ripgrep'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-cucumber'
