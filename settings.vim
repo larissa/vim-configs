@@ -61,12 +61,14 @@ let g:ruby_indent_assignment_style = 'variable'
 nnoremap <silent> <Leader>b :CtrlPBuffer<CR>
 " key mapping for f[ile] search
 let g:ctrlp_map = '<Leader>f'
-" use the silver searcher with ctrlp
-if executable('ag')
-  " use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
-  " use ag in ctrlp for listing files. lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+" use ripgrep with ctrlp
+if executable('rg')
+  " use ripgrep over grep
+  set grepprg=rg\ --no-heading\ --color\ never
+  " use ripgrep in ctrlp for listing files. lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'rg %s -l --color never --files -g ""'
+  " rg is fast enough that ctrlp doesn't need to cache
+  let g:ctrlp_use_caching = 0
 endif
 
 " vim-rooter
