@@ -2,8 +2,8 @@
 " =====                      MAPPINGS                       =====
 " ===============================================================
 
-" make <c-l> clear the highlight as well as redraw
-nnoremap <F9> :nohls<CR>:redraw!<CR>
+" make backspace clear the highlight as well as redraw
+nnoremap <silent> <BS> :nohls<CR>:redraw!<CR>
 
 " make Y consistent with C and D
 nnoremap Y y$
@@ -11,9 +11,6 @@ nnoremap Y y$
 " makes k and j work through wrapped lines
 nnoremap j gj
 nnoremap k gk
-
-" makes backspace similar to enter/+ and go to non-blank char from line upward
-nnoremap <BS> -
 
 " key mapping for buffer navigation
 nnoremap <silent> <Tab> :bnext<CR>
@@ -56,9 +53,9 @@ function! Preserve(command)
 endfunction
 
 " remove trailing whitespaces
-nnoremap <silent> <F5> :call Preserve("%s/\\s\\+$//e")<CR>
+nnoremap <silent> - :call Preserve("%s/\\s\\+$//e")<CR>
 " indent whole file
-nnoremap <silent> <F6> :call Preserve("normal gg=G")<CR>
+nnoremap <silent> + :call Preserve("normal gg=G")<CR>
 
 " open buffer for quick note taking. buffer is deleted when closed
 nnoremap <silent> <Leader>q :call OpenScratchBuffer()<CR>
