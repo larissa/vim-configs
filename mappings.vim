@@ -16,6 +16,8 @@ nnoremap k gk
 nnoremap <silent> <Tab> :bnext<CR>
 nnoremap <silent> <S-Tab> :bprevious<CR>
 nnoremap <silent> <Space> :buffer#<CR>
+nnoremap <silent> <leader>d :bp<bar>bd#<CR>
+nnoremap <silent> <leader>x :w<bar>bp<bar>bd#<CR>
 cnoreabbrev bx w<bar>bd
 
 " key mapping for splits navigation
