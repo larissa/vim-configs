@@ -12,6 +12,14 @@ nnoremap Y y$
 nnoremap j gj
 nnoremap k gk
 
+" gives gj and gk the original behaviour of j and k
+nnoremap gj j
+nnoremap gk k
+
+" use gh and gl to go through jumplist
+nnoremap gl <C-i>
+nnoremap gh <C-o>
+
 " key mapping for buffer navigation
 nnoremap <silent> <Tab> :bnext<CR>
 nnoremap <silent> <S-Tab> :bprevious<CR>
