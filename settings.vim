@@ -7,7 +7,7 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
 " NERDTree
 " toggle directory view
-nnoremap <silent> <Leader>v :NERDTreeToggle<CR>
+nnoremap <silent> <Leader>t :NERDTreeToggle<CR>
 " reveal current file in directory tree
 nnoremap <silent> <Leader>r :NERDTreeFind<CR>
 " ignore some files
@@ -22,6 +22,10 @@ let NERDSpaceDelims = 1
 nnoremap <silent> <Leader>g :TagbarToggle<CR>
 let g:tagbar_autoclose = 1
 let g:tagbar_autofocus = 1
+
+" TaskList
+" show list of todo and fixme items on a file
+map <unique> <Leader>v <Plug>TaskList
 
 " ALE (lint)
 " customize linter signs
