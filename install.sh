@@ -117,8 +117,8 @@ echo "$(tput setaf 2)Installing plugins.$(tput sgr 0)"
 echo "---------------------------------------------------------"
 
 cd ~/.vim
-git clone https://github.com/VundleVim/Vundle.vim.git bundle/Vundle.vim
-nvim +PluginInstall +qall
+curl -fLo autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+nvim +PlugInstall +qall
 nvim +UpdateRemotePlugins +qall
 nvim +'call coc#util#install()' +qall
 

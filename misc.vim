@@ -2,9 +2,6 @@
 " =====                        MISC                         =====
 " ===============================================================
 
-" load ftplugins and indent files. required
-filetype plugin indent on
-
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
 

@@ -1,6 +1,7 @@
 tmp/
 log/
 bundle/*
+autoload/plug.vim
 tags
 *~
 *.sw*

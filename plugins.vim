@@ -2,66 +2,67 @@
 " =====                     PLUGINS                         =====
 " ===============================================================
 
-"required for vundle
-filetype off
+" vim-plug automatic installaion
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall
+endif
 
-"set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-"let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
+" Specify a directory for plugins
+call plug#begin('~/.vim/bundle')
 
-"Plugins
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'jremmen/vim-ripgrep'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'kien/ctrlp.vim'
-Plugin 'tpope/vim-cucumber'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-fugitive'
-Plugin 'mattn/gist-vim'
-Plugin 'tpope/vim-git'
-Plugin 'tpope/vim-haml'
-Plugin 'othree/html5.vim'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-rails'
-Plugin 'cakebaker/scss-syntax.vim'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'honza/vim-snippets'
-Plugin 'kana/vim-submode'
-Plugin 'tpope/vim-surround'
-Plugin 'w0rp/ale'
-Plugin 'majutsushi/tagbar'
-Plugin 'timcharper/textile.vim'
-Plugin 'SirVer/ultisnips'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-Plugin 'jeetsukumaran/vim-buffergator'
-Plugin 'tpope/vim-bundler'
-Plugin 'asux/vim-capybara'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'junegunn/vim-easy-align'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'jamessan/vim-gnupg'
-Plugin 'henrik/vim-indexed-search'
-Plugin 'airblade/vim-rooter'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'hallison/vim-ruby-sinatra'
-Plugin 'tpope/vim-rvm'
-Plugin 'nelstrom/vim-textobj-rubyblock'
-Plugin 'kana/vim-textobj-user'
-Plugin 'mattn/webapi-vim'
-Plugin 'vim-scripts/TaskList.vim'
-Plugin 'vim-scripts/matchit.zip'
-Plugin 'vim-scripts/CSApprox'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'posva/vim-vue'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-Plugin 'thaerkh/vim-indentguides'
-Plugin 'neoclide/coc.nvim'
+" Plugins
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'jremmen/vim-ripgrep'
+Plug 'jiangmiao/auto-pairs'
+Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-cucumber'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
+Plug 'mattn/gist-vim'
+Plug 'tpope/vim-git'
+Plug 'tpope/vim-haml'
+Plug 'othree/html5.vim'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-rails'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'honza/vim-snippets'
+Plug 'kana/vim-submode'
+Plug 'tpope/vim-surround'
+Plug 'w0rp/ale'
+Plug 'majutsushi/tagbar'
+Plug 'timcharper/textile.vim'
+Plug 'SirVer/ultisnips'
+Plug 'tpope/vim-unimpaired'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'jeetsukumaran/vim-buffergator'
+Plug 'tpope/vim-bundler'
+Plug 'asux/vim-capybara'
+Plug 'kchmck/vim-coffee-script'
+Plug 'junegunn/vim-easy-align'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'jamessan/vim-gnupg'
+Plug 'henrik/vim-indexed-search'
+Plug 'airblade/vim-rooter'
+Plug 'vim-ruby/vim-ruby'
+Plug 'hallison/vim-ruby-sinatra'
+Plug 'tpope/vim-rvm'
+Plug 'nelstrom/vim-textobj-rubyblock'
+Plug 'kana/vim-textobj-user'
+Plug 'mattn/webapi-vim'
+Plug 'vim-scripts/TaskList.vim'
+Plug 'vim-scripts/matchit.zip'
+Plug 'vim-scripts/CSApprox'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'posva/vim-vue'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'thaerkh/vim-indentguides'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 
-"All of your Plugins must be added before the following line
-call vundle#end()            " required
+"All of your Plugins must be added before the following line. Automatically
+"executes filetype plugin indent on and syntax enable
+call plug#end()
