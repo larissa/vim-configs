@@ -31,6 +31,8 @@ map <unique> <Leader>v <Plug>TaskList
 " customize linter signs
 let g:ale_sign_error = '●'
 let g:ale_sign_warning = '•'
+" customize linter colours
+highlight link ALEErrorSign DiffDelete
 " only lint when leaving insert mode after an edit
 let g:ale_lint_on_text_changed = 'normal'
 let g:ale_lint_on_insert_leave = 1
@@ -89,7 +91,7 @@ let g:AutoPairsShortcutFastWrap = ''
 let g:AutoPairsShortcutJump = ''
 
 " airline
-let g:airline_theme="wombat"
+let g:airline_theme="base16_paraiso"
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled=1
 " don't show current mode down the bottom
