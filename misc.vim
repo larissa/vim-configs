@@ -119,6 +119,7 @@ if !has('nvim')
   endif
 endif
 set termguicolors
+let base16colorspace=256
 colorscheme base16-paraiso
 
 " jump to last cursor position when opening a file
