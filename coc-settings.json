@@ -7,5 +7,6 @@
   "diagnostic.warningSign": "•",
   "diagnostic.hintSign": "!",
   "diagnostic.infoSign": "!",
+  "diagnostic.displayByAle": true,
   "solargraph.checkGemVersion": false
 }
