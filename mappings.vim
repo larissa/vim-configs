@@ -130,3 +130,6 @@ nnoremap <silent> <Leader>p :set paste<CR>o<esc>"*]p:set nopaste<CR>
 " toggle language spellcheck
 nnoremap <F7> :setlocal spell! spelllang=en<CR>
 nnoremap <F8> :setlocal spell! spelllang=pt<CR>
+
+" maps esc to go to normal mode in terminal
+tnoremap <Esc> <C-\><C-n>
