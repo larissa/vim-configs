@@ -19,5 +19,8 @@ source ~/.vim/misc.vim
 " plugins custom settings
 source ~/.vim/settings.vim
 
+" theme vim configuration
+source ~/.vim/theme.vim
+
 " custom mappings
 source ~/.vim/mappings.vim

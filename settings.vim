@@ -91,7 +91,6 @@ let g:AutoPairsShortcutFastWrap = ''
 let g:AutoPairsShortcutJump = ''
 
 " airline
-let g:airline_theme="base16_paraiso"
 let g:airline_powerline_fonts=1
 let g:airline#extensions#tabline#enabled=1
 " don't show current mode down the bottom
