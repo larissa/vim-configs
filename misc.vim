@@ -115,7 +115,7 @@ highlight ColorColumn ctermbg=1
 " use html, javascript and css configs on vue component files
 autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 " use typescript and jsx on tsx files
-autocmd BufRead,BufNewFile *.tsx setlocal filetype=typescript.jsx
+autocmd BufRead,BufNewFile *.tsx setlocal filetype=typescript.tsx
 " enable spell check only for text files
 au BufRead,BufNewFile *.tex,*.txt,*.md,*.textile,*.markdown setlocal spell
 " some python stuff
