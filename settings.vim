@@ -12,6 +12,8 @@ nnoremap <silent> <Leader>t :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>r :NERDTreeFind<CR>
 " ignore some files
 let NERDTreeIgnore = ['\.pyc$','\~$']
+" release ? for search
+let NERDTreeMapHelp='<f1>'
 
 " NERDCommenter
 " add space around comment delimiters on NERDCommenter
