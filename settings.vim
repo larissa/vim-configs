@@ -11,13 +11,14 @@ nnoremap <silent> <Leader>t :NERDTreeToggle<CR>
 " reveal current file in directory tree
 nnoremap <silent> <Leader>r :NERDTreeFind<CR>
 " ignore some files
-let NERDTreeIgnore = ['\.pyc$','\~$']
+let g:NERDTreeIgnore = ['\.pyc$','\~$']
 " release ? for search
-let NERDTreeMapHelp='<f1>'
+let g:NERDTreeMapHelp='<f1>'
 
 " NERDCommenter
 " add space around comment delimiters on NERDCommenter
-let NERDSpaceDelims = 1
+let g:NERDSpaceDelims = 1
+let g:NERDDefaultAlign = 'left'
 
 " Tagbar
 " toggle g[o] to navigation
