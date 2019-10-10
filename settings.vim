@@ -65,20 +65,33 @@ call submode#map('resize-window', 'n', '', 'l', '<c-w><')
 " ruby-indent
 let g:ruby_indent_assignment_style = 'variable'
 
-" CtrlP
-" key mapping for b[uffer] search
-nnoremap <silent> <Leader>b :CtrlPBuffer<CR>
-" key mapping for f[ile] search
-let g:ctrlp_map = '<Leader>f'
-" use ripgrep with ctrlp
+" use ripgrep over grep
 if executable('rg')
-  " use ripgrep over grep
   set grepprg=rg\ --no-heading\ --color\ never
-  " use ripgrep in ctrlp for listing files. lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'rg %s -l --color never --files -g ""'
-  " rg is fast enough that ctrlp doesn't need to cache
-  let g:ctrlp_use_caching = 0
 endif
+
+" fzf fuzzy search
+" key mapping for b[uffer] search
+nnoremap <silent> <Leader>b :Buffers<CR>
+" key mapping for f[ile] search
+nnoremap <silent> <Leader>f :Files<CR>
+" make fzf window smaller
+let g:fzf_layout = { 'down': '~20%' }
+" unmap <ESC> binding for fzf buffer if binding exists or suppress unmap error
+au FileType fzf silent! tunmap <Esc>
+
+" customize tiebreak to favor file name match
+let s:fzf_custom_opts = { 'options': '--tiebreak=end,length,index' }
+command! -bang -nargs=? -complete=buffer Buffers
+  \ call fzf#vim#buffers(<q-args>, s:fzf_custom_opts, <bang>0)
+
+" customize tiebreak to favor file name and show preview window
+if executable('rg')
+  " also change source of search if rg is installed
+  let s:fzf_custom_opts.source = 'rg --files'
+endif
+command! -bang -nargs=? -complete=dir Files
+  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(s:fzf_custom_opts), <bang>0)
 
 " vim-rooter
 " use vim-rooter manually

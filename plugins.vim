@@ -16,7 +16,6 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'jremmen/vim-ripgrep'
 Plug 'jiangmiao/auto-pairs'
-Plug 'kien/ctrlp.vim'
 Plug 'tpope/vim-cucumber'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
@@ -63,6 +62,8 @@ Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mxw/vim-jsx'
 Plug 'thaerkh/vim-indentguides'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
+Plug 'junegunn/fzf', { 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
 
 "All of your Plugins must be added before the following line. Automatically
 "executes filetype plugin indent on and syntax enable
