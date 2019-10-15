@@ -80,12 +80,8 @@ let g:fzf_layout = { 'down': '~20%' }
 " unmap <ESC> binding for fzf buffer if binding exists or suppress unmap error
 au FileType fzf silent! tunmap <Esc>
 
-" customize tiebreak to favor file name match
-let s:fzf_custom_opts = { 'options': '--tiebreak=end,length,index' }
-command! -bang -nargs=? -complete=buffer Buffers
-  \ call fzf#vim#buffers(<q-args>, s:fzf_custom_opts, <bang>0)
-
 " customize tiebreak to favor file name and show preview window
+let s:fzf_custom_opts = { 'options': '--tiebreak=end,length,index' }
 if executable('rg')
   " also change source of search if rg is installed
   let s:fzf_custom_opts.source = 'rg --files'
