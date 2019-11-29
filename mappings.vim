@@ -41,6 +41,9 @@ endfunction
 nnoremap <silent> <leader>d :call CloseBufWithoutClosingWinWithBuffergator()<CR>
 nnoremap <silent> <leader>x :w<CR>:call CloseBufWithoutClosingWinWithBuffergator()<CR>
 
+" exit quickfix window
+nnoremap <leader>e :cclose<CR>
+
 " map save file to <leader>w
 nnoremap <leader>w :w<CR>
 
