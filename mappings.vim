@@ -41,8 +41,8 @@ endfunction
 nnoremap <silent> <leader>d :call CloseBufWithoutClosingWinWithBuffergator()<CR>
 nnoremap <silent> <leader>x :w<CR>:call CloseBufWithoutClosingWinWithBuffergator()<CR>
 
-" map save file to <leader>s
-nnoremap <leader>s :w<CR>
+" map save file to <leader>w
+nnoremap <leader>w :w<CR>
 
 " key mapping for splits navigation
 nnoremap <silent> <c-h> :wincmd h<cr>
