@@ -70,6 +70,9 @@ if executable('rg')
   set grepprg=rg\ --no-heading\ --color\ never
 endif
 
+" map ripgrep search to <leader>s[search]
+nnoremap <leader>s :Rg<CR>
+
 " fzf fuzzy search
 " key mapping for b[uffer] search
 nnoremap <silent> <Leader>b :Buffers<CR>
@@ -144,4 +147,3 @@ inoremap <silent> <Tab> <C-R>=g:TabActionBasedOnContext()<CR>
 vmap <Enter> <Plug>(EasyAlign)
 " start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
-
