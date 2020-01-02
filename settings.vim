@@ -26,10 +26,6 @@ nnoremap <silent> <Leader>g :TagbarToggle<CR>
 let g:tagbar_autoclose = 1
 let g:tagbar_autofocus = 1
 
-" TaskList
-" show list of todo and fixme items on a file
-map <unique> <Leader>v <Plug>TaskList
-
 " ALE (lint)
 " customize linter signs
 let g:ale_sign_error = '●'
@@ -91,12 +87,6 @@ if executable('rg')
 endif
 command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(s:fzf_custom_opts), <bang>0)
-
-" vim-rooter
-" use vim-rooter manually
-let g:rooter_manual_only = 1
-" set vim-rooter map to c[hange]r[oot]
-map <silent> <unique> <Leader>cr <Plug>RooterChangeToRootDirectory
 
 " auto-pairs
 " remove auto-pairs mapping for meta key
