@@ -25,6 +25,7 @@ let g:NERDDefaultAlign = 'left'
 nnoremap <silent> <Leader>g :TagbarToggle<CR>
 let g:tagbar_autoclose = 1
 let g:tagbar_autofocus = 1
+let g:tagbar_map_help = '<F1>'
 
 " ALE (lint)
 " customize linter signs
