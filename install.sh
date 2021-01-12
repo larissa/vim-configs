@@ -95,8 +95,8 @@ else
   echo "$(tput setaf 2)JARVIS: Installing system fonts.$(tput sgr 0)"
   echo "---------------------------------------------------------"
 
-  brew tap caskroom/fonts
-  brew cask install font-dejavu-sans-mono-for-powerline
+  brew tap homebrew/cask-fonts
+  brew install --cask font-dejavu-sans-mono-for-powerline
 fi
 
 echo "---------------------------------------------------------"
