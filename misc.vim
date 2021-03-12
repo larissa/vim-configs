@@ -70,6 +70,9 @@ set foldmethod=indent   " fold based on indent
 set foldnestmax=3       " deepest fold is 3 levels
 set nofoldenable        " dont fold by default
 
+" line join settings; do not add two spaces after pontuation when joining lines
+set nojoinspaces
+
 " command line tab completion
 set wildmode=list:longest   " make cmdline tab completion similar to bash
 set wildmenu                " enable ctrl-n and ctrl-p to scroll thru matches
