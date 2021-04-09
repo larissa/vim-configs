@@ -56,6 +56,7 @@ Plug 'thaerkh/vim-indentguides'
 Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
+Plug 'dag/vim-fish'
 
 "All of your Plugins must be added before the following line. Automatically
 "executes filetype plugin indent on and syntax enable

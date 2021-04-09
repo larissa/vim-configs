@@ -7,6 +7,11 @@ set nocompatible
 let mapleader="'"
 nnoremap \ '
 
+" vim needs a POSIX compatible shell
+if &shell =~# 'fish$'
+  set shell=sh
+endif
+
 " install plugins
 source ~/.vim/plugins.vim
 
