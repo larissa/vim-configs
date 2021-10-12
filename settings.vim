@@ -83,8 +83,8 @@ au FileType fzf silent! tunmap <Esc>
 " customize tiebreak to favor file name and show preview window
 let s:fzf_custom_opts = { 'options': '--tiebreak=end,length,index' }
 if executable('rg')
-  " also change source of search if rg is installed
-  let s:fzf_custom_opts.source = 'rg --files'
+  " also change source of search if rg is installed and ignore sorbet files
+  let s:fzf_custom_opts.source = 'rg --files -g "!*.rbi"'
 endif
 command! -bang -nargs=? -complete=dir Files
   \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(s:fzf_custom_opts), <bang>0)
