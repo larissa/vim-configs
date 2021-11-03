@@ -20,6 +20,10 @@ nnoremap gk k
 nnoremap gl <C-i>
 nnoremap gh <C-o>
 
+" keep cursor centered after next search
+nnoremap n nzz
+nnoremap N Nzz
+
 " key mapping for buffer navigation
 nnoremap <silent> <Tab> :bnext<CR>
 nnoremap <silent> <S-Tab> :bprevious<CR>
@@ -110,10 +114,13 @@ vnoremap <left> <nop>
 vnoremap <right> <nop>
 
 " swap lines
-nnoremap <silent>K <Up>"add"ap<Up>
-nnoremap <silent>J "add"ap
+nnoremap <silent>K :m .-2<CR>==
+nnoremap <silent>J :m .+1<CR>==
+vnoremap <silent>K :m '<-2<CR>gv=gv
+vnoremap <silent>J :m '>+1<CR>gv=gv
 " regain J functionality of joining lines by mapping it to Q
 nnoremap Q J
+vnoremap Q J
 
 " remap : to ç to make commands easier to type on brazilian keyboard
 nnoremap ç :
