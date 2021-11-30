@@ -51,7 +51,8 @@ else
   echo "$(tput setaf 2)homebrew, nodejs, yarn, neovim, python, fonts$(tput sgr 0)"
   echo "---------------------------------------------------------"
 
-  if [[ -f "/usr/local/bin/brew" ]]
+  which brew > /dev/null 2>&1
+  if [ $? -eq 0 ]
   then
     echo "---------------------------------------------------------"
     echo "$(tput setaf 3)homebrew already installed, skipping.$(tput sgr 0)"
