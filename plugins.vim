@@ -54,7 +54,7 @@ Plug 'othree/es.next.syntax.vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'mxw/vim-jsx'
 Plug 'thaerkh/vim-indentguides'
-Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'dag/vim-fish'
