@@ -4,7 +4,7 @@ if [ $(uname -s) = 'Linux' ]
 then
   echo "---------------------------------------------------------"
   echo "$(tput setaf 2)Preparing dependencies for Linux:$(tput sgr 0)"
-  echo "$(tput setaf 2)universal-ctags, ncurses-term, nodejs, yarn, neovim, fonts$(tput sgr 0)"
+  echo "$(tput setaf 2)universal-ctags, ncurses-term, fzf, nodejs, yarn, neovim, fonts$(tput sgr 0)"
   echo "---------------------------------------------------------"
 
   echo "---------------------------------------------------------"
@@ -19,7 +19,7 @@ then
   echo "$(tput setaf 2)Installing system packages.$(tput sgr 0)"
   echo "---------------------------------------------------------"
 
-  sudo apt-get install -y universal-ctags ncurses-term fonts-powerline nodejs yarn neovim ruby-neovim python3-pip python-pip
+  sudo apt-get install -y universal-ctags ncurses-term fzf fonts-powerline nodejs yarn neovim ruby-neovim python3-pip python-pip
 
   echo "---------------------------------------------------------"
   echo "$(tput setaf 2)Installing Ruby neovim package.$(tput sgr 0)"
@@ -65,10 +65,10 @@ else
   fi
 
   echo "---------------------------------------------------------"
-  echo "$(tput setaf 2)Installing node, yarn, neovim and python as system packages.$(tput sgr 0)"
+  echo "$(tput setaf 2)Installing fzf, node, yarn, neovim and python as system packages.$(tput sgr 0)"
   echo "---------------------------------------------------------"
 
-  for package in node yarn neovim python3
+  for package in fzf node yarn neovim python3
   do
     brew install $package
     echo "---------------------------------------------------------"
