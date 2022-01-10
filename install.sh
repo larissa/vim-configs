@@ -119,9 +119,9 @@ echo "---------------------------------------------------------"
 
 cd ~/.vim
 curl -fLo autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-nvim +PlugInstall +qall
-nvim +UpdateRemotePlugins +qall
-nvim +'call coc#util#install()' +qall
+nvim -es -i NONE -u 'init.vim' -c 'PlugInstall' -c 'qa'
+nvim -es -i NONE -u 'init.vim' -c 'UpdateRemotePlugins' -c 'qa'
+nvim -es -i NONE -u 'init.vim' -c 'call coc#util#install()' -c 'qa'
 
 echo "---------------------------------------------------------"
 echo "$(tput setaf 2)Installing autocomplete tools.$(tput sgr 0)"
@@ -135,8 +135,8 @@ else
   sudo gem install solargraph
 fi
 
-nvim +'CocInstall coc-json' +qall
-nvim +'CocInstall coc-solargraph coc-tsserver coc-css' +qall
+nvim -es -i NONE -u 'init.vim' -c 'CocInstall coc-json' -c 'qa'
+nvim -es -i NONE -u 'init.vim' -c 'CocInstall coc-solargraph coc-tsserver coc-css' -c 'qa'
 
 echo "---------------------------------------------------------"
 echo "$(tput setaf 2)Installing linters.$(tput sgr 0)"
