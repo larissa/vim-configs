@@ -132,7 +132,6 @@ vnoremap ; :
 
 " regain ; functionality by mapping it to :
 nnoremap : ;
-vnoremap : ;
 
 " enter paste mode, add new line, paste, leave paste mode
 nnoremap <silent> <Leader>p :set paste<CR>o<esc>"*]p:set nopaste<CR>
