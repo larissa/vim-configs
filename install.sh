@@ -19,7 +19,7 @@ then
   echo "$(tput setaf 2)Installing system packages.$(tput sgr 0)"
   echo "---------------------------------------------------------"
 
-  sudo apt-get install -y universal-ctags ncurses-term ripgrep fzf fonts-powerline nodejs yarn neovim ruby-neovim python3-pip python-pip
+  sudo apt-get install -y universal-ctags ncurses-term ripgrep fzf fonts-powerline nodejs yarn neovim ruby-neovim python3-pip
 
   echo "---------------------------------------------------------"
   echo "$(tput setaf 2)Installing Ruby neovim package.$(tput sgr 0)"
@@ -37,7 +37,6 @@ then
   echo "$(tput setaf 2)Installing Python neovim package.$(tput sgr 0)"
   echo "---------------------------------------------------------"
 
-  pip2 install neovim
   pip3 install neovim
 
   echo "---------------------------------------------------------"
