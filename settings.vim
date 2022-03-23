@@ -47,18 +47,6 @@ let g:buffergator_suppress_keymaps = 1
 " key mapping to l[ist] buffers using buffergator
 nnoremap <silent> <Leader>l :BuffergatorToggle<CR>
 
-" Submode
-" key mapping for split resize
-let g:submode_timeoutlen = 2000
-call submode#enter_with('resize-window', 'n', '', '<c-w>k', '<c-w>-')
-call submode#enter_with('resize-window', 'n', '', '<c-w>j', '<c-w>+')
-call submode#enter_with('resize-window', 'n', '', '<c-w>h', '<c-w>>')
-call submode#enter_with('resize-window', 'n', '', '<c-w>l', '<c-w><')
-call submode#map('resize-window', 'n', '', 'k', '<c-w>-')
-call submode#map('resize-window', 'n', '', 'j', '<c-w>+')
-call submode#map('resize-window', 'n', '', 'h', '<c-w>>')
-call submode#map('resize-window', 'n', '', 'l', '<c-w><')
-
 " ruby-indent
 let g:ruby_indent_assignment_style = 'variable'
 
