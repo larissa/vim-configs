@@ -133,9 +133,6 @@ vnoremap ; :
 " regain ; functionality by mapping it to :
 nnoremap : ;
 
-" enter paste mode, add new line, paste, leave paste mode
-nnoremap <silent> <Leader>p :set paste<CR>o<esc>"*]p:set nopaste<CR>
-
 " toggle language spellcheck
 nnoremap <F7> :setlocal spell! spelllang=en<CR>
 nnoremap <F8> :setlocal spell! spelllang=pt<CR>
