@@ -140,9 +140,6 @@ nnoremap <silent> <Leader>p :set paste<CR>o<esc>"*]p:set nopaste<CR>
 nnoremap <F7> :setlocal spell! spelllang=en<CR>
 nnoremap <F8> :setlocal spell! spelllang=pt<CR>
 
-" maps esc to go to normal mode in terminal
-tnoremap <Esc> <C-\><C-n>
-
 if !empty($USING_DEV)
   " open file on github
   nnoremap <silent> <F10> :silent exe "!fish -c 'git_open $argv' ".expand('%:p').' '.line('.')<CR>

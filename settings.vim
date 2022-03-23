@@ -63,10 +63,6 @@ nnoremap <leader>s :Rg<CR>
 nnoremap <silent> <Leader>b :Buffers<CR>
 " key mapping for f[ile] search
 nnoremap <silent> <Leader>f :Files<CR>
-" make fzf window smaller
-let g:fzf_layout = { 'down': '~20%' }
-" unmap <ESC> binding for fzf buffer if binding exists or suppress unmap error
-au FileType fzf silent! tunmap <Esc>
 
 " customize tiebreak to favor file name and show preview window
 let s:fzf_custom_opts = { 'options': '--tiebreak=end,length,index' }
