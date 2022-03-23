@@ -96,7 +96,7 @@ else
   echo "---------------------------------------------------------"
 
   brew tap homebrew/cask-fonts
-  brew install --cask font-dejavu-sans-mono-for-powerline
+  brew install --cask font-dejavu-sans-mono-for-powerline font-fira-mono font-fira-mono-for-powerline font-fira-mono-nerd-font
 fi
 
 echo "---------------------------------------------------------"

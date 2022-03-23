@@ -39,6 +39,7 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'RRethy/nvim-treesitter-textsubjects'
 Plug 'RRethy/nvim-base16'
+Plug 'ryanoasis/vim-devicons' "this plugin needs to be last
 
 "All of your Plugins must be added before the following line. Automatically
 "executes filetype plugin indent on and syntax enable
