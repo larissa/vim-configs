@@ -61,14 +61,6 @@ nnoremap <silent> <c-\> :wincmd p<cr>
 " change local directory to match current file
 nnoremap <silent> <Leader>cd :cd %:h<CR>
 
-"fix mistype :W and :Q
-command! -bang -range=% -complete=file -nargs=* WQ <line1>,<line2>wq<bang> <args>
-command! -bang -complete=file -nargs=* Qa qa<bang>
-command! -bang -complete=file -nargs=* QA qa<bang>
-command! -bang -range=% -complete=file -nargs=* Wq <line1>,<line2>wq<bang> <args>
-command! -bang -range=% -complete=file -nargs=* W <line1>,<line2>w<bang> <args>
-command! -bang Q quit<bang>
-
 " general function that restores previous state after a command
 function! Preserve(command)
   " Preparation: save last search, and cursor position.
