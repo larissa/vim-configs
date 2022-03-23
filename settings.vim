@@ -59,6 +59,7 @@ endif
 
 " map ripgrep search to <leader>s[search]
 nnoremap <leader>s :Rg<CR>
+vnoremap <leader>s :call RgVisual()<CR>
 
 " fzf fuzzy search
 " key mapping for b[uffer] search
