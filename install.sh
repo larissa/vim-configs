@@ -2,24 +2,26 @@
 
 if [ $(uname -s) = 'Linux' ]
 then
-  echo "---------------------------------------------------------"
-  echo "$(tput setaf 2)Preparing dependencies for Linux:$(tput sgr 0)"
-  echo "$(tput setaf 2)universal-ctags, ncurses-term, ripgrep, fzf, nodejs, yarn, neovim, fonts$(tput sgr 0)"
-  echo "---------------------------------------------------------"
+  if ! [ $SPIN ]; then
+    echo "---------------------------------------------------------"
+    echo "$(tput setaf 2)Preparing dependencies for Linux:$(tput sgr 0)"
+    echo "$(tput setaf 2)universal-ctags, ncurses-term, ripgrep, fzf, nodejs, yarn, neovim, fonts$(tput sgr 0)"
+    echo "---------------------------------------------------------"
 
-  echo "---------------------------------------------------------"
-  echo "$(tput setaf 3)Adding yarn's debian package repository.$(tput sgr 0)"
-  echo "---------------------------------------------------------"
+    echo "---------------------------------------------------------"
+    echo "$(tput setaf 3)Adding yarn's debian package repository.$(tput sgr 0)"
+    echo "---------------------------------------------------------"
 
-  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-  echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-  sudo apt-get update
+    curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+    echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+    sudo apt-get update
 
-  echo "---------------------------------------------------------"
-  echo "$(tput setaf 2)Installing system packages.$(tput sgr 0)"
-  echo "---------------------------------------------------------"
+    echo "---------------------------------------------------------"
+    echo "$(tput setaf 2)Installing system packages.$(tput sgr 0)"
+    echo "---------------------------------------------------------"
 
-  sudo apt-get install -y universal-ctags ncurses-term ripgrep fzf fonts-powerline nodejs yarn neovim ruby-neovim python3-pip
+    sudo apt-get install -y universal-ctags ncurses-term ripgrep fzf fonts-powerline nodejs yarn neovim ruby-neovim python3-pip
+  fi
 
   echo "---------------------------------------------------------"
   echo "$(tput setaf 2)Installing Ruby neovim package.$(tput sgr 0)"
