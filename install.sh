@@ -20,7 +20,7 @@ then
     echo "$(tput setaf 2)Installing system packages.$(tput sgr 0)"
     echo "---------------------------------------------------------"
 
-    sudo apt-get install -y universal-ctags ncurses-term ripgrep fzf fonts-powerline nodejs yarn neovim ruby-neovim python3-pip
+    sudo apt-get install -y universal-ctags ncurses-term ripgrep fzf fonts-powerline nodejs yarn neovim python3-pip
   fi
 
   echo "---------------------------------------------------------"
