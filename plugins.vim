@@ -29,6 +29,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'junegunn/vim-easy-align'
 Plug 'Lokaltog/vim-easymotion'
+Plug 'unblevable/quick-scope'
 Plug 'jamessan/vim-gnupg'
 Plug 'thaerkh/vim-indentguides'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}

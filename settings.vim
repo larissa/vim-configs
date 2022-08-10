@@ -131,3 +131,7 @@ inoremap <silent> <Tab> <C-R>=g:TabActionBasedOnContext()<CR>
 vmap <Enter> <Plug>(EasyAlign)
 " start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
+
+" quick-scope
+" Trigger a highlight in the appropriate direction when pressing these keys:
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
