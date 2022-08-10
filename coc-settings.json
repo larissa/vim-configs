@@ -2,6 +2,7 @@
   "suggest.minTriggerInputLength": 2,
   "suggest.snippetIndicator": "►",
   "suggest.maxCompleteItemCount": 20,
+  "suggest.noselect": true,
   "coc.preferences.messageLevel": "error",
   "diagnostic.errorSign": "●",
   "diagnostic.warningSign": "•",

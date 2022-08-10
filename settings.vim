@@ -101,30 +101,18 @@ set guifont=DejaVu\ Sans\ Mono\ for\ Powerline
 let g:UltiSnipsExpandTrigger="<c-space>"
 
 " coc.nvim - autocompletion
-" close preview window when completion is done.
-autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 " use s-tab to navigate between completion list
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
 " use <tab> for trigger completion and navigate to the next complete item
-function! g:TabActionBasedOnContext()
-  " if there is an autocomplete list, go to the next item
-  if pumvisible()
-    return "\<C-n>"
-  endif
-  " if there is whitespace behind the current column, insert a tab character
+function! CheckBackspace() abort
   let col = col('.') - 1
-  if !col || getline('.')[col - 1] =~ '\s'
-    return "\<Tab>"
-  endif
-  " if snippet was successful, does nothing
-  call UltiSnips#ExpandSnippet()
-  if g:ulti_expand_res > 0
-    return ""
-  endif
-  " start looking for autocomplete
-  return coc#refresh()
+  return !col || getline('.')[col - 1]  =~ '\s'
 endfunction
-inoremap <silent> <Tab> <C-R>=g:TabActionBasedOnContext()<CR>
+inoremap <silent><expr> <Tab>
+  \ coc#pum#visible() ? coc#pum#next(1) :
+  \ CheckBackspace() ? "\<Tab>" :
+  \ UltiSnips#CanExpandSnippet() ? "\<C-R>=(UltiSnips#ExpandSnippet())<CR>" :
+  \ coc#refresh()
 
 " EasyAlign
 " start interactive EasyAlign in visual mode (e.g. vip<Enter>)
