@@ -4,12 +4,12 @@ if [ $(uname -s) = 'Linux' ]
 then
   if ! [ $SPIN ]; then
     echo "---------------------------------------------------------"
-    echo "$(tput setaf 2)Preparing dependencies for Linux:$(tput sgr 0)"
-    echo "$(tput setaf 2)universal-ctags, ncurses-term, ripgrep, fzf, nodejs, yarn, neovim, fonts$(tput sgr 0)"
+    TERM=${TERM:-unknown} echo "$(tput setaf 2)Preparing dependencies for Linux:$(tput sgr 0)"
+    TERM=${TERM:-unknown} echo "$(tput setaf 2)universal-ctags, ncurses-term, ripgrep, fzf, nodejs, yarn, neovim, fonts$(tput sgr 0)"
     echo "---------------------------------------------------------"
 
     echo "---------------------------------------------------------"
-    echo "$(tput setaf 3)Adding yarn's debian package repository.$(tput sgr 0)"
+    TERM=${TERM:-unknown} echo "$(tput setaf 3)Adding yarn's debian package repository.$(tput sgr 0)"
     echo "---------------------------------------------------------"
 
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
@@ -17,14 +17,14 @@ then
     sudo apt-get update
 
     echo "---------------------------------------------------------"
-    echo "$(tput setaf 2)Installing system packages.$(tput sgr 0)"
+    TERM=${TERM:-unknown} echo "$(tput setaf 2)Installing system packages.$(tput sgr 0)"
     echo "---------------------------------------------------------"
 
     sudo apt-get install -y universal-ctags ncurses-term ripgrep fzf fonts-powerline nodejs yarn neovim python3-pip
   fi
 
   echo "---------------------------------------------------------"
-  echo "$(tput setaf 2)Installing Ruby neovim package.$(tput sgr 0)"
+  TERM=${TERM:-unknown} echo "$(tput setaf 2)Installing Ruby neovim package.$(tput sgr 0)"
   echo "---------------------------------------------------------"
 
   which rvm > /dev/null 2>&1
@@ -36,37 +36,37 @@ then
   fi
 
   echo "---------------------------------------------------------"
-  echo "$(tput setaf 2)Installing Python neovim package.$(tput sgr 0)"
+  TERM=${TERM:-unknown} echo "$(tput setaf 2)Installing Python neovim package.$(tput sgr 0)"
   echo "---------------------------------------------------------"
 
   pip3 install neovim
 
   echo "---------------------------------------------------------"
-  echo "$(tput setaf 2)Installing node neovim package$(tput sgr 0)"
+  TERM=${TERM:-unknown} echo "$(tput setaf 2)Installing node neovim package$(tput sgr 0)"
   echo "---------------------------------------------------------"
 
   yarn global add neovim --ignore-optional
 else
   echo "---------------------------------------------------------"
-  echo "$(tput setaf 2)Preparing dependencies for MacOS:$(tput sgr 0)"
-  echo "$(tput setaf 2)homebrew, nodejs, yarn, neovim, python, fonts$(tput sgr 0)"
+  TERM=${TERM:-unknown} echo "$(tput setaf 2)Preparing dependencies for MacOS:$(tput sgr 0)"
+  TERM=${TERM:-unknown} echo "$(tput setaf 2)homebrew, nodejs, yarn, neovim, python, fonts$(tput sgr 0)"
   echo "---------------------------------------------------------"
 
   which brew > /dev/null 2>&1
   if [ $? -eq 0 ]
   then
     echo "---------------------------------------------------------"
-    echo "$(tput setaf 3)homebrew already installed, skipping.$(tput sgr 0)"
+    TERM=${TERM:-unknown} echo "$(tput setaf 3)homebrew already installed, skipping.$(tput sgr 0)"
     echo "---------------------------------------------------------"
   else
     echo "---------------------------------------------------------"
-    echo "$(tput setaf 2)Installing Homebrew.$(tput sgr 0)"
+    TERM=${TERM:-unknown} echo "$(tput setaf 2)Installing Homebrew.$(tput sgr 0)"
     echo "---------------------------------------------------------"
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   fi
 
   echo "---------------------------------------------------------"
-  echo "$(tput setaf 2)Installing ripgrep, fzf, node, yarn, neovim and python as system packages.$(tput sgr 0)"
+  TERM=${TERM:-unknown} echo "$(tput setaf 2)Installing ripgrep, fzf, node, yarn, neovim and python as system packages.$(tput sgr 0)"
   echo "---------------------------------------------------------"
 
   for package in ripgrep fzf node yarn neovim python3
@@ -76,25 +76,25 @@ else
   done
 
   echo "---------------------------------------------------------"
-  echo "$(tput setaf 2)Installing Ruby neovim package.$(tput sgr 0)"
+  TERM=${TERM:-unknown} echo "$(tput setaf 2)Installing Ruby neovim package.$(tput sgr 0)"
   echo "---------------------------------------------------------"
 
   sudo gem install neovim
 
   echo "---------------------------------------------------------"
-  echo "$(tput setaf 2)Installing Python neovim package.$(tput sgr 0)"
+  TERM=${TERM:-unknown} echo "$(tput setaf 2)Installing Python neovim package.$(tput sgr 0)"
   echo "---------------------------------------------------------"
 
   pip3 install neovim
 
   echo "---------------------------------------------------------"
-  echo "$(tput setaf 2)Installing node neovim package$(tput sgr 0)"
+  TERM=${TERM:-unknown} echo "$(tput setaf 2)Installing node neovim package$(tput sgr 0)"
   echo "---------------------------------------------------------"
 
   yarn global add neovim --ignore-optional
 
   echo "---------------------------------------------------------"
-  echo "$(tput setaf 2)JARVIS: Installing system fonts.$(tput sgr 0)"
+  TERM=${TERM:-unknown} echo "$(tput setaf 2)JARVIS: Installing system fonts.$(tput sgr 0)"
   echo "---------------------------------------------------------"
 
   brew tap homebrew/cask-fonts
@@ -102,7 +102,7 @@ else
 fi
 
 echo "---------------------------------------------------------"
-echo "$(tput setaf 2)Linking dotfiles.$(tput sgr 0)"
+TERM=${TERM:-unknown} echo "$(tput setaf 2)Linking dotfiles.$(tput sgr 0)"
 echo "---------------------------------------------------------"
 
 ln -s ~/.vim/vimrc ~/.vimrc
@@ -115,7 +115,7 @@ ln -s ~/.vim/init.vim $NVIM_DIR/init.vim
 ln -s ~/.vim/coc-settings.json $NVIM_DIR/coc-settings.json
 
 echo "---------------------------------------------------------"
-echo "$(tput setaf 2)Installing plugins.$(tput sgr 0)"
+TERM=${TERM:-unknown} echo "$(tput setaf 2)Installing plugins.$(tput sgr 0)"
 echo "---------------------------------------------------------"
 
 cd ~/.vim
@@ -125,7 +125,7 @@ nvim -es -i NONE -u 'init.vim' -c 'UpdateRemotePlugins' -c 'qa'
 nvim -es -i NONE -u 'init.vim' -c 'call coc#util#install()' -c 'qa'
 
 echo "---------------------------------------------------------"
-echo "$(tput setaf 2)Installing autocomplete tools.$(tput sgr 0)"
+TERM=${TERM:-unknown} echo "$(tput setaf 2)Installing autocomplete tools.$(tput sgr 0)"
 echo "---------------------------------------------------------"
 
 which rvm > /dev/null 2>&1
@@ -140,7 +140,7 @@ nvim -es -i NONE -u 'init.vim' -c 'CocInstall coc-json' -c 'qa'
 nvim -es -i NONE -u 'init.vim' -c 'CocInstall coc-solargraph coc-tsserver coc-css' -c 'qa'
 
 echo "---------------------------------------------------------"
-echo "$(tput setaf 2)Installing linters.$(tput sgr 0)"
+TERM=${TERM:-unknown} echo "$(tput setaf 2)Installing linters.$(tput sgr 0)"
 echo "---------------------------------------------------------"
 
 which rvm > /dev/null 2>&1
@@ -155,7 +155,7 @@ yarn global add eslint eslint-plugin-vue babel-eslint eslint-plugin-react --igno
 yarn global add stylelint stylelint-scss --ignore-optional
 
 echo "---------------------------------------------------------"
-echo "$(tput setaf 2)Install complete.$(tput sgr 0)"
+TERM=${TERM:-unknown} echo "$(tput setaf 2)Install complete.$(tput sgr 0)"
 echo "---------------------------------------------------------"
 
 exit 0
