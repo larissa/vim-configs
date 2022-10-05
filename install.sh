@@ -30,9 +30,9 @@ then
   which rvm > /dev/null 2>&1
   if [ $? -eq 0 ]
   then
-    rvm @global do gem install neovim
+    rvm @global do gem install neovim --no-ri --no-rdoc
   else
-    sudo gem install neovim
+    sudo gem install neovim --no-ri --no-rdoc
   fi
 
   echo "---------------------------------------------------------"
@@ -45,7 +45,7 @@ then
   echo "$(tput setaf 2)Installing node neovim package$(tput sgr 0)"
   echo "---------------------------------------------------------"
 
-  yarn global add neovim
+  yarn global add neovim --ignore-optional
 else
   echo "---------------------------------------------------------"
   echo "$(tput setaf 2)Preparing dependencies for MacOS:$(tput sgr 0)"
@@ -91,7 +91,7 @@ else
   echo "$(tput setaf 2)Installing node neovim package$(tput sgr 0)"
   echo "---------------------------------------------------------"
 
-  yarn global add neovim
+  yarn global add neovim --ignore-optional
 
   echo "---------------------------------------------------------"
   echo "$(tput setaf 2)JARVIS: Installing system fonts.$(tput sgr 0)"
@@ -131,9 +131,9 @@ echo "---------------------------------------------------------"
 which rvm > /dev/null 2>&1
 if [ $? -eq 0 ]
 then
-  rvm @global do gem install solargraph
+  rvm @global do gem install solargraph --no-ri --no-rdoc
 else
-  sudo gem install solargraph
+  sudo gem install solargraph --no-ri --no-rdoc
 fi
 
 nvim -es -i NONE -u 'init.vim' -c 'CocInstall coc-json' -c 'qa'
@@ -146,13 +146,13 @@ echo "---------------------------------------------------------"
 which rvm > /dev/null 2>&1
 if [ $? -eq 0 ]
 then
-  rvm @global do gem install rubocop
+  rvm @global do gem install rubocop --no-ri --no-rdoc
 else
-  sudo gem install rubocop
+  sudo gem install rubocop --no-ri --no-rdoc
 fi
 
-yarn global add eslint eslint-plugin-vue babel-eslint eslint-plugin-react
-yarn global add stylelint stylelint-scss
+yarn global add eslint eslint-plugin-vue babel-eslint eslint-plugin-react --ignore-optional
+yarn global add stylelint stylelint-scss --ignore-optional
 
 echo "---------------------------------------------------------"
 echo "$(tput setaf 2)Install complete.$(tput sgr 0)"
