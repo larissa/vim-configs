@@ -131,5 +131,5 @@ nnoremap <F8> :setlocal spell! spelllang=pt<CR>
 
 if !empty($USING_DEV)
   " open file on github
-  nnoremap <silent> <F10> :silent exe "!fish -c 'git_open $argv' ".expand('%:p').' '.line('.')<CR>
+  nnoremap <silent> <F10> :silent exe "!fish -c 'git_open ".expand('%:p')." ".line('.')."'"<CR>
 endif
