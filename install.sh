@@ -30,9 +30,9 @@ then
   which rvm > /dev/null 2>&1
   if [ $? -eq 0 ]
   then
-    rvm @global do gem install neovim --no-ri --no-rdoc
+    rvm @global do gem install neovim --no-document
   else
-    sudo gem install neovim --no-ri --no-rdoc
+    sudo gem install neovim --no-document
   fi
 
   echo "---------------------------------------------------------"
@@ -131,9 +131,9 @@ echo "---------------------------------------------------------"
 which rvm > /dev/null 2>&1
 if [ $? -eq 0 ]
 then
-  rvm @global do gem install solargraph --no-ri --no-rdoc
+  rvm @global do gem install solargraph --no-document
 else
-  sudo gem install solargraph --no-ri --no-rdoc
+  sudo gem install solargraph --no-document
 fi
 
 nvim -es -i NONE -u 'init.vim' -c 'CocInstall coc-json' -c 'qa'
@@ -146,9 +146,9 @@ echo "---------------------------------------------------------"
 which rvm > /dev/null 2>&1
 if [ $? -eq 0 ]
 then
-  rvm @global do gem install rubocop --no-ri --no-rdoc
+  rvm @global do gem install rubocop --no-document
 else
-  sudo gem install rubocop --no-ri --no-rdoc
+  sudo gem install rubocop --no-document
 fi
 
 yarn global add eslint eslint-plugin-vue babel-eslint eslint-plugin-react --ignore-optional
