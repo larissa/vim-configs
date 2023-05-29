@@ -2,9 +2,6 @@
 " =====                  PLUGINS SETTINGS                   =====
 " ===============================================================
 
-" EditorConfig
-let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
-
 " NERDTree
 " toggle directory view
 nnoremap <silent> <Leader>t :NERDTreeToggle<CR>
@@ -51,6 +48,7 @@ nnoremap <silent> <Leader>l :BuffergatorToggle<CR>
 
 " ruby-indent
 let g:ruby_indent_assignment_style = 'variable'
+let g:ruby_indent_hanging_elements = 0
 
 " use ripgrep over grep
 if executable('rg')

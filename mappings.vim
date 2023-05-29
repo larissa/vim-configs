@@ -91,7 +91,7 @@ function! OpenScratchBuffer()
   endif
 endfunction
 
-" training stuff
+" Remove directionals
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>

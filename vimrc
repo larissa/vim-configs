@@ -1,7 +1,3 @@
-"Use Vim settings, rather then Vi settings.
-"This must be first, because it changes other options as a side effect.
-set nocompatible
-
 " swap \ and ', use single quote as leader
 " leader needs to be mapped before any other mapping
 let mapleader="'"
