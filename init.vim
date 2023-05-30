@@ -1,4 +1,2 @@
-set runtimepath+=~/.vim,~/.vim/after
-set packpath+=~/.vim
-source ~/.vimrc
+source ~/.nvim/vimrc
 lua require('treesitter')

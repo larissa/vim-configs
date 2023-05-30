@@ -3,13 +3,13 @@
 " ===============================================================
 
 " vim-plug automatic installaion
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+if empty(glob('~/.nvim/autoload/plug.vim'))
+  silent !curl -fLo ~/.nvim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
   autocmd VimEnter * PlugInstall
 endif
 
 " Specify a directory for plugins
-call plug#begin('~/.vim/bundle')
+call plug#begin('~/.nvim/bundle')
 
 " Plugins
 Plug 'scrooloose/nerdcommenter'

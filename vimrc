@@ -9,16 +9,16 @@ if &shell =~# 'fish$'
 endif
 
 " install plugins
-source ~/.vim/plugins.vim
+source ~/.nvim/plugins.vim
 
 " misc vim configuration
-source ~/.vim/misc.vim
+source ~/.nvim/misc.vim
 
 " plugins custom settings
-source ~/.vim/settings.vim
+source ~/.nvim/settings.vim
 
 " theme vim configuration
-source ~/.vim/theme.vim
+source ~/.nvim/theme.vim
 
 " custom mappings
-source ~/.vim/mappings.vim
+source ~/.nvim/mappings.vim

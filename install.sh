@@ -105,20 +105,13 @@ echo "---------------------------------------------------------"
 echo "$(tput setaf 2)Linking dotfiles.$(tput sgr 0)"
 echo "---------------------------------------------------------"
 
-ln -s ~/.vim/vimrc ~/.vimrc
-ln -s ~/.vim/gvimrc ~/.gvimrc
-
-NVIM_DIR=${XDG_CONFIG_HOME:-$HOME/.config}/nvim
-
-mkdir -p $NVIM_DIR/
-ln -s ~/.vim/init.vim $NVIM_DIR/init.vim
-ln -s ~/.vim/coc-settings.json $NVIM_DIR/coc-settings.json
+ln -s ~/.nvim ${XDG_CONFIG_HOME:-$HOME/.config}/nvim
 
 echo "---------------------------------------------------------"
 echo "$(tput setaf 2)Installing plugins.$(tput sgr 0)"
 echo "---------------------------------------------------------"
 
-cd ~/.vim
+cd ~/.nvim
 curl -fLo autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 nvim -es -i NONE -u 'init.vim' -c 'PlugInstall' -c 'qa'
 nvim -es -i NONE -u 'init.vim' -c 'UpdateRemotePlugins' -c 'qa'
