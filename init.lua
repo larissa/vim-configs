@@ -1,4 +1,5 @@
-local utils = require("utils")
+utils = require("utils")
+icons = require("icons")
 
 -- swap \ and ', use single quote as leader
 -- leader needs to be mapped before any other mapping
@@ -7,6 +8,10 @@ utils.nmap("\\", "'")
 
 -- vim needs a POSIX compatible shell
 vim.opt.shell = "/bin/sh"
+
+-- netrw will be replaced by a plugin
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- install plugins
 require("plugins")

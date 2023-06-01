@@ -16,8 +16,6 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local utils = require("utils")
-
 require("lazy").setup({
   {
     "scrooloose/nerdcommenter",
@@ -28,18 +26,17 @@ require("lazy").setup({
     end,
   },
   {
-    "scrooloose/nerdtree",
+    "nvim-tree/nvim-tree.lua",
+    version = "*",
+    dependencies = "nvim-tree/nvim-web-devicons",
+    config = function()
+      require("plugins/nvimtree").setup()
+    end,
     init = function()
       -- toggle directory view
-      utils.nmap("<Leader>t", ":NERDTreeToggle<CR>")
+      utils.nmap("<Leader>t", ":NvimTreeToggle<CR>")
       -- reveal current file in directory tree
-      utils.nmap("<Leader>r", ":NERDTreeFind<CR>")
-      -- ignore some files
-      vim.g.NERDTreeIgnore = {"\\.pyc$","\\~$"}
-      -- release ? for search
-      vim.g.NERDTreeMapHelp = "<F1>"
-      -- remove help text
-      vim.g.NERDTreeMinimalUI = 1
+      utils.nmap("<Leader>r", ":NvimTreeFindFile<CR>")
     end,
   },
   {
