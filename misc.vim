@@ -84,3 +84,12 @@ autocmd BufRead,BufNewFile *.vue setlocal filetype=vue.html.javascript.css
 autocmd BufRead,BufNewFile *.tsx setlocal filetype=typescript.tsx
 " enable spell check only for text files
 au BufRead,BufNewFile *.tex,*.txt,*.md,*.textile,*.markdown setlocal spell
+
+" native vim ruby-indent
+let g:ruby_indent_assignment_style = 'variable'
+let g:ruby_indent_hanging_elements = 0
+
+" use ripgrep over grep
+if executable('rg')
+  set grepprg=rg\ --no-heading\ --color\ never
+endif

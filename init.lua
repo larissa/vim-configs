@@ -1,4 +1,4 @@
-local utils = require('utils')
+local utils = require("utils")
 
 -- swap \ and ', use single quote as leader
 -- leader needs to be mapped before any other mapping
@@ -9,7 +9,7 @@ utils.nmap("\\", "'")
 vim.opt.shell = "/bin/sh"
 
 -- install plugins
-vim.cmd("source ~/.nvim/plugins.vim")
+require("plugins")
 
 -- misc vim configuration
 vim.cmd("source ~/.nvim/misc.vim")
@@ -23,4 +23,4 @@ vim.cmd("source ~/.nvim/theme.vim")
 -- custom mappings
 vim.cmd("source ~/.nvim/mappings.vim")
 
-require('treesitter')
+require("treesitter")
