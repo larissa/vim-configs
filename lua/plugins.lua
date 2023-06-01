@@ -95,16 +95,22 @@ require("lazy").setup({
   },
   "tpope/vim-unimpaired",
   {
-    "vim-airline/vim-airline",
-    dependencies = {
-      "vim-airline/vim-airline-themes",
-    },
-    init = function()
-      vim.g.airline_powerline_fonts = 1
-      vim.g["airline#extensions#tabline#enabled"] = 1
-      -- don't show current mode down the bottom
-      vim.opt.showmode = false
-      vim.opt.guifont = "DejaVu\\ Sans\\ Mono\\ for\\ Powerline"
+    "nvim-lualine/lualine.nvim",
+    dependencies = "nvim-tree/nvim-web-devicons",
+    config = function()
+      require("lualine").setup {
+        options = {
+          globalstatus = true,
+        },
+      }
+    end,
+  },
+  {
+    "akinsho/bufferline.nvim",
+    version = "*",
+    dependencies = "nvim-tree/nvim-web-devicons",
+    config = function()
+      require("bufferline").setup{}
     end,
   },
   {
@@ -140,9 +146,7 @@ require("lazy").setup({
   { "neoclide/coc.nvim", branch = "release" },
   {
     "junegunn/fzf", build = "./install --bin",
-    dependencies = {
-      "junegunn/fzf.vim",
-    },
+    dependencies = "junegunn/fzf.vim",
   },
   "dag/vim-fish",
   {
@@ -153,5 +157,4 @@ require("lazy").setup({
     },
   },
   "RRethy/nvim-base16",
-  "ryanoasis/vim-devicons", -- this plugin needs to be last
 })

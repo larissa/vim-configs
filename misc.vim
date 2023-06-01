@@ -22,16 +22,6 @@ set linespace=4
 set formatoptions+=l
 set tw=80
 
-" statusline setup. fallback to this when not using airline
-set statusline=%f       " tail of the filename
-set statusline+=%{fugitive#statusline()} " git
-set statusline+=%{exists('g:loaded_rvm')?rvm#statusline():''} " rvm
-set statusline+=%=      " left/right separator
-set statusline+=%c,     " cursor column
-set statusline+=%l/%L   " cursor line/total lines
-set statusline+=\ %P    " percent through file
-set laststatus=2
-
 " indent settings
 set shiftwidth=2
 set softtabstop=2
