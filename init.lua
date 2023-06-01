@@ -22,9 +22,6 @@ vim.cmd("source ~/.nvim/misc.vim")
 -- plugins custom settings
 vim.cmd("source ~/.nvim/settings.vim")
 
--- theme vim configuration
-vim.cmd("source ~/.nvim/theme.vim")
-
 -- custom mappings
 vim.cmd("source ~/.nvim/mappings.vim")
 

@@ -100,6 +100,7 @@ require("lazy").setup({
     config = function()
       require("lualine").setup {
         options = {
+          theme = "onedark",
           globalstatus = true,
         },
       }
@@ -156,5 +157,16 @@ require("lazy").setup({
       "RRethy/nvim-treesitter-textsubjects",
     },
   },
-  "RRethy/nvim-base16",
+  {
+    "navarasu/onedark.nvim",
+    config = function()
+      require('onedark').setup {
+        style = 'warm',
+        toggle_style_key = '<F9>',
+      }
+    end,
+    init = function()
+      require('onedark').load()
+    end,
+  },
 })
