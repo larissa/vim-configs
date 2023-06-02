@@ -22,17 +22,3 @@ nnoremap <silent> <Leader>b :Buffers<CR>
 nnoremap <silent> <Leader>f :Files<CR>
 " key mapping for h[unt] search files for content
 nnoremap <silent> <Leader>h :FuzzyFind<CR>
-
-" coc.nvim - autocompletion
-" use s-tab to navigate between completion list
-inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
-" use <tab> for trigger completion and navigate to the next complete item
-function! CheckBackspace() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~ '\s'
-endfunction
-inoremap <silent><expr> <Tab>
-  \ coc#pum#visible() ? coc#pum#next(1) :
-  \ CheckBackspace() ? "\<Tab>" :
-  \ UltiSnips#CanExpandSnippet() ? "\<C-R>=(UltiSnips#ExpandSnippet())<CR>" :
-  \ coc#refresh()

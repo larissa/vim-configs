@@ -20,7 +20,7 @@ then
     echo "$(tput setaf 2)Installing system packages.$(tput sgr 0)"
     echo "---------------------------------------------------------"
 
-    sudo apt-get install -y universal-ctags ncurses-term ripgrep fzf fonts-powerline nodejs yarn neovim python3-pip
+    sudo apt-get install -y universal-ctags ncurses-term ripgrep fzf fonts-powerline nodejs yarn neovim
   fi
 
   echo "---------------------------------------------------------"
@@ -36,12 +36,6 @@ then
   fi
 
   echo "---------------------------------------------------------"
-  echo "$(tput setaf 2)Installing Python neovim package.$(tput sgr 0)"
-  echo "---------------------------------------------------------"
-
-  pip3 install neovim
-
-  echo "---------------------------------------------------------"
   echo "$(tput setaf 2)Installing node neovim package$(tput sgr 0)"
   echo "---------------------------------------------------------"
 
@@ -49,7 +43,7 @@ then
 else
   echo "---------------------------------------------------------"
   echo "$(tput setaf 2)Preparing dependencies for MacOS:$(tput sgr 0)"
-  echo "$(tput setaf 2)homebrew, nodejs, yarn, neovim, python, fonts$(tput sgr 0)"
+  echo "$(tput setaf 2)homebrew, nodejs, yarn, neovim, fonts$(tput sgr 0)"
   echo "---------------------------------------------------------"
 
   which brew > /dev/null 2>&1
@@ -66,10 +60,10 @@ else
   fi
 
   echo "---------------------------------------------------------"
-  echo "$(tput setaf 2)Installing ripgrep, fzf, node, yarn, neovim and python as system packages.$(tput sgr 0)"
+  echo "$(tput setaf 2)Installing ripgrep, fzf, node, yarn, and neovim as system packages.$(tput sgr 0)"
   echo "---------------------------------------------------------"
 
-  for package in ripgrep fzf node yarn neovim python3
+  for package in ripgrep fzf node yarn neovim
   do
     brew install $package
     echo "---------------------------------------------------------"
@@ -80,12 +74,6 @@ else
   echo "---------------------------------------------------------"
 
   sudo gem install neovim
-
-  echo "---------------------------------------------------------"
-  echo "$(tput setaf 2)Installing Python neovim package.$(tput sgr 0)"
-  echo "---------------------------------------------------------"
-
-  pip3 install neovim
 
   echo "---------------------------------------------------------"
   echo "$(tput setaf 2)Installing node neovim package$(tput sgr 0)"
