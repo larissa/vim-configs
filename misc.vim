@@ -48,9 +48,6 @@ set scrolloff=3
 " some stuff to get the mouse going in term
 set mouse=a
 
-" automatic reloading of vimrc
-autocmd! bufwritepost .vimrc source %
-
 " jump to last cursor position when opening a file
 " dont do it when writing a commit log entry
 autocmd BufReadPost * call SetCursorPosition()
