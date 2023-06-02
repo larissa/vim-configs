@@ -156,6 +156,9 @@ require("lazy").setup({
       "nvim-treesitter/nvim-treesitter-textobjects",
       "RRethy/nvim-treesitter-textsubjects",
     },
+    config = function()
+      require("plugins/treesitter").setup()
+    end
   },
   {
     "navarasu/onedark.nvim",

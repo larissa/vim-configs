@@ -24,5 +24,3 @@ vim.cmd("source ~/.nvim/settings.vim")
 
 -- custom mappings
 vim.cmd("source ~/.nvim/mappings.vim")
-
-require("treesitter")
