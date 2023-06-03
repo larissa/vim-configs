@@ -48,13 +48,10 @@ require("lazy").setup({
     end,
   },
   {
-    "jiangmiao/auto-pairs",
-    init = function()
-      -- remove auto-pairs mapping for meta key
-      vim.g.AutoPairsShortcutBackInsert = ''
-      vim.g.AutoPairsShortcutToggle = ''
-      vim.g.AutoPairsShortcutFastWrap = ''
-      vim.g.AutoPairsShortcutJump = ''
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = function()
+      require("plugins/autopairs").setup()
     end,
   },
   "tpope/vim-fugitive",
