@@ -159,8 +159,16 @@ require("lazy").setup({
     end,
   },
   "jamessan/vim-gnupg",
-  "thaerkh/vim-indentguides",
   { "neoclide/coc.nvim", branch = "release" },
+
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    config = function()
+      require("plugins/indentlines").setup()
+    end,
+    dependencies = "nvim-treesitter/nvim-treesitter",
+  },
+
   {
     "junegunn/fzf", build = "./install --bin",
     dependencies = "junegunn/fzf.vim",
