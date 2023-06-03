@@ -57,7 +57,6 @@ require("lazy").setup({
       vim.g.AutoPairsShortcutJump = ''
     end,
   },
-  "tpope/vim-endwise",
   "tpope/vim-fugitive",
   "tpope/vim-surround",
   {
@@ -179,6 +178,7 @@ require("lazy").setup({
     dependencies = {
       "nvim-treesitter/nvim-treesitter-textobjects",
       "RRethy/nvim-treesitter-textsubjects",
+      "RRethy/nvim-treesitter-endwise",
     },
     config = function()
       require("plugins/treesitter").setup()

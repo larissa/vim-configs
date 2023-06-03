@@ -108,6 +108,10 @@ function M.setup()
           [':'] = 'textsubjects-container-outer',
         },
     },
+
+    endwise = {
+        enable = true,
+    },
   }
 end
 
