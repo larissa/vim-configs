@@ -55,7 +55,6 @@ require("lazy").setup({
     end,
   },
   "tpope/vim-fugitive",
-  "tpope/vim-surround",
   {
     "w0rp/ale",
     init = function()
@@ -140,7 +139,14 @@ require("lazy").setup({
     end,
   },
   {
-    'echasnovski/mini.bufremove',
+    "echasnovski/mini.surround",
+    version = "*",
+    config = function()
+      require("plugins/surround").setup()
+    end
+  },
+  {
+    "echasnovski/mini.bufremove",
     version = '*',
     config = function()
       require('mini.bufremove').setup {}
