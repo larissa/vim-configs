@@ -100,6 +100,7 @@ require("lazy").setup({
       require('luasnip').filetype_extend("ruby", {"rails"})
       require("luasnip.loaders.from_vscode").lazy_load()
     end,
+    version = "*",
     event = "InsertEnter",
     dependencies = {
       "rafamadriz/friendly-snippets",
