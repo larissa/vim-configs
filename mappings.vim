@@ -30,21 +30,6 @@ nnoremap <silent> <S-Tab> :bprevious<CR>
 nnoremap <silent> <Space> :buffer#<CR>
 cnoreabbrev bx w<bar>bd
 
-" function to close current buffer without closing the window.
-" if the current buffer is the last buffer, open an empty buffer before closing
-function! CloseBufWithoutClosingWinWithBuffergator()
-  let bn = bufnr('%')
-  exe 'BuffergatorMruCyclePrev'
-  " if we didn't change buffers, create a new one
-  if bn == bufnr('%')
-    exe 'enew'
-  endif
-  exe 'bd'.bn
-endfunction
-
-nnoremap <silent> <leader>d :call CloseBufWithoutClosingWinWithBuffergator()<CR>
-nnoremap <silent> <leader>x :w<CR>:call CloseBufWithoutClosingWinWithBuffergator()<CR>
-
 " exit quickfix window
 nnoremap <leader>e :cclose<CR>
 

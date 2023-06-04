@@ -16,4 +16,8 @@ function M.vmap(shortcut, command)
   map('v', shortcut, command)
 end
 
+function M.nmap_lua(shortcut, command)
+  vim.keymap.set("n", shortcut, command, { noremap = true, silent = true })
+end
+
 return M

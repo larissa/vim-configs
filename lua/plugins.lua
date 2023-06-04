@@ -123,18 +123,31 @@ require("lazy").setup({
     version = "*",
     dependencies = "nvim-tree/nvim-web-devicons",
     config = function()
-      require("bufferline").setup{}
+      require("bufferline").setup {}
     end,
   },
   {
-    "jeetsukumaran/vim-buffergator",
+    "j-morano/buffer_manager.nvim",
+    dependencies = "nvim-lua/plenary.nvim",
+    config = function()
+      require("buffer_manager").setup {}
+    end,
     init = function()
-      vim.g.buffergator_viewport_split_policy = "B"
-      vim.g.buffergator_autoexpand_on_split = 0
-      vim.g.buffergator_split_size = 5
-      vim.g.buffergator_suppress_keymaps = 1
-      -- key mapping to l[ist] buffers using buffergator
-      utils.nmap("<Leader>l", ":BuffergatorToggle<CR>")
+      local bmui = require("buffer_manager.ui")
+      -- key mapping to l[ist] buffers to be managed (e.g bulk close)
+      utils.nmap_lua("<Leader>l", bmui.toggle_quick_menu)
+    end,
+  },
+  {
+    'echasnovski/mini.bufremove',
+    version = '*',
+    config = function()
+      require('mini.bufremove').setup {}
+    end,
+    init = function()
+      local bufremove = require("mini.bufremove")
+      -- key mapping to delete buffer while preserving windows
+      utils.nmap_lua("<Leader>d", bufremove.wipeout)
     end
   },
   {
