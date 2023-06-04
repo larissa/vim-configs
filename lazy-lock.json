@@ -35,5 +35,4 @@
   "vim-fugitive": { "branch": "master", "commit": "5f0d280b517cacb16f59316659966c7ca5e2bea2" },
   "vim-gnupg": { "branch": "main", "commit": "f9b608f29003dfde6450931dc0f495a912973a88" },
   "vim-ripgrep": { "branch": "master", "commit": "2bb2425387b449a0cd65a54ceb85e123d7a320b8" },
-  "vim-unimpaired": { "branch": "master", "commit": "6d44a6dc2ec34607c41ec78acf81657248580bf1" }
 }

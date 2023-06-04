@@ -105,7 +105,6 @@ require("lazy").setup({
       "rafamadriz/friendly-snippets",
     },
   },
-  "tpope/vim-unimpaired",
   {
     "nvim-lualine/lualine.nvim",
     dependencies = "nvim-tree/nvim-web-devicons",
