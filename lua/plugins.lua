@@ -54,7 +54,6 @@ require("lazy").setup({
       require("plugins/autopairs").setup()
     end,
   },
-  "tpope/vim-fugitive",
   {
     "w0rp/ale",
     init = function()
@@ -70,6 +69,21 @@ require("lazy").setup({
       utils.nmap("<Leader>m", ":ALEDetail<CR>")
     end
   },
+
+  -- Git integration
+  {
+    "lewis6991/gitsigns.nvim",
+    config = function()
+      require("plugins/gitsigns").setup()
+    end,
+  },
+  {
+    "tpope/vim-fugitive",
+    init = function()
+      utils.nmap("<Leader>vg", ":Ge:<CR>")
+    end
+  },
+
   {
     "majutsushi/tagbar",
     init = function()
