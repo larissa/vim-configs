@@ -59,8 +59,10 @@ require("lazy").setup({
     config = function()
       bufremove = require("mini.bufremove")
       bufremove.setup {}
-      -- key mapping to delete buffer while preserving windows
+      -- delete buffer while preserving windows
       utils.nmap("<Leader>d", bufremove.wipeout)
+      -- force delete buffer even if there are unsaved changes
+      utils.nmap("<Leader>D", function() bufremove.wipeout(0, true) end)
     end,
   },
   {
