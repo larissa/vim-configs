@@ -18,8 +18,5 @@ require("plugins")
 -- misc vim configuration
 vim.cmd("source ~/.nvim/misc.vim")
 
--- plugins custom settings
-vim.cmd("source ~/.nvim/settings.vim")
-
 -- custom mappings
 vim.cmd("source ~/.nvim/mappings.vim")

@@ -135,17 +135,18 @@ require("lazy").setup({
 
   -- Searching
   {
-    "junegunn/fzf", build = "./install --bin",
-    dependencies = "junegunn/fzf.vim",
-  },
-  {
-    "jremmen/vim-ripgrep",
+    "nvim-telescope/telescope.nvim",
+    branch = "0.1.x",
     config = function()
-      -- map ripgrep search to <leader>s[search]
-      utils.nmap("<Leader>s", ":Rg<CR>")
-      utils.vmap("<Leader>s", ":call RgVisual()<CR>")
+      require('plugins/telescope').setup()
     end,
+    dependencies = {
+      "nvim-telescope/telescope-fzf-native.nvim",
+      "nvim-telescope/telescope-live-grep-args.nvim",
+      "nvim-lua/plenary.nvim",
+    },
   },
+  { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
 
   -- UI
   {
