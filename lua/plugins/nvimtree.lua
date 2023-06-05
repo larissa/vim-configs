@@ -69,6 +69,11 @@ function M.setup()
       },
     }
   )
+
+  -- toggle directory view
+  utils.nmap("<Leader>t", ":NvimTreeToggle<CR>")
+  -- reveal current file in directory tree
+  utils.nmap("<Leader>r", ":NvimTreeFindFile<CR>")
 end
 
 return M

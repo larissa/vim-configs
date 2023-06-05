@@ -21,7 +21,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   {
     "scrooloose/nerdcommenter",
-    init = function()
+    config = function()
       -- add space around comment delimiters on NERDCommenter
       vim.g.NERDSpaceDelims = 1
       vim.g.NERDDefaultAlign = 'left'
@@ -34,16 +34,10 @@ require("lazy").setup({
     config = function()
       require("plugins/nvimtree").setup()
     end,
-    init = function()
-      -- toggle directory view
-      utils.nmap("<Leader>t", ":NvimTreeToggle<CR>")
-      -- reveal current file in directory tree
-      utils.nmap("<Leader>r", ":NvimTreeFindFile<CR>")
-    end,
   },
   {
     "jremmen/vim-ripgrep",
-    init = function()
+    config = function()
       -- map ripgrep search to <leader>s[search]
       utils.nmap("<Leader>s", ":Rg<CR>")
       utils.vmap("<Leader>s", ":call RgVisual()<CR>")
@@ -81,14 +75,14 @@ require("lazy").setup({
   },
   {
     "tpope/vim-fugitive",
-    init = function()
+    config = function()
       utils.nmap("<Leader>vg", ":Ge:<CR>")
     end
   },
 
   {
     "majutsushi/tagbar",
-    init = function()
+    config = function()
       -- toggle g[o] to navigation
       utils.nmap("<Leader>g", ":TagbarToggle<CR>")
       vim.g.tagbar_autoclose = 1
@@ -137,17 +131,13 @@ require("lazy").setup({
     "akinsho/bufferline.nvim",
     version = "*",
     dependencies = "nvim-tree/nvim-web-devicons",
-    config = function()
-      require("bufferline").setup {}
-    end,
+    config = true,
   },
   {
     "j-morano/buffer_manager.nvim",
     dependencies = "nvim-lua/plenary.nvim",
     config = function()
       require("buffer_manager").setup {}
-    end,
-    init = function()
       local bmui = require("buffer_manager.ui")
       -- key mapping to l[ist] buffers to be managed (e.g bulk close)
       utils.nmap("<Leader>l", bmui.toggle_quick_menu)
@@ -164,17 +154,15 @@ require("lazy").setup({
     "echasnovski/mini.bufremove",
     version = '*',
     config = function()
-      require('mini.bufremove').setup {}
-    end,
-    init = function()
-      local bufremove = require("mini.bufremove")
+      bufremove = require("mini.bufremove")
+      bufremove.setup {}
       -- key mapping to delete buffer while preserving windows
       utils.nmap("<Leader>d", bufremove.wipeout)
-    end
+    end,
   },
   {
     "junegunn/vim-easy-align",
-    init = function()
+    config = function()
       -- start interactive EasyAlign in visual mode (e.g. vip<Enter>)
       utils.vmap("<Enter>", "<Plug>(EasyAlign)")
       -- start interactive EasyAlign for a motion/text object (e.g. gaip)
@@ -219,13 +207,12 @@ require("lazy").setup({
   {
     "navarasu/onedark.nvim",
     config = function()
-      require('onedark').setup {
+      local onedark = require('onedark')
+      onedark.setup {
         style = 'warm',
         toggle_style_key = '<F9>',
       }
-    end,
-    init = function()
-      require('onedark').load()
+      onedark.load()
     end,
   },
 })
