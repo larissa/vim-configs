@@ -1,6 +1,7 @@
 local M = {}
 
 local utils = require("utils")
+local icons = require("icons")
 
 local function on_attach(bufnr)
   local api = require("nvim-tree.api")

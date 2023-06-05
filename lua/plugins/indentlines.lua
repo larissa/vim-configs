@@ -1,5 +1,7 @@
 local M = {}
 
+local icons = require("icons")
+
 M.setup = function()
   require("indent_blankline").setup({
     filetype_exclude = {

@@ -1,5 +1,4 @@
 local utils = require("utils")
-icons = require("icons")
 
 -- swap \ and ', use single quote as leader
 -- leader needs to be mapped before any other mapping

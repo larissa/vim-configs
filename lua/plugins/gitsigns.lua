@@ -1,6 +1,7 @@
 local M = {}
 
 local utils = require("utils")
+local icons = require("icons")
 
 M.setup = function()
   require("gitsigns").setup({
