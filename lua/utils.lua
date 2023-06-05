@@ -1,23 +1,26 @@
 local M = {}
 
-function map(mode, shortcut, command)
-  vim.api.nvim_set_keymap(mode, shortcut, command, { noremap = true, silent = true })
+function map(mode, shortcut, command, opts)
+  opts = opts or {}
+  opts.silent = true
+  -- convenience function `vim.keymap.set` sets noremap by default
+  vim.keymap.set(mode, shortcut, command, opts)
 end
 
-function M.nmap(shortcut, command)
-  map('n', shortcut, command)
+function M.nmap(shortcut, command, opts)
+  map("n", shortcut, command, opts)
 end
 
-function M.imap(shortcut, command)
-  map('i', shortcut, command)
+function M.imap(shortcut, command, opts)
+  map("i", shortcut, command, opts)
 end
 
-function M.vmap(shortcut, command)
-  map('v', shortcut, command)
+function M.vmap(shortcut, command, opts)
+  map("v", shortcut, command, opts)
 end
 
-function M.nmap_lua(shortcut, command)
-  vim.keymap.set("n", shortcut, command, { noremap = true, silent = true })
+function M.xmap(shortcut, command, opts)
+  map("x", shortcut, command, opts)
 end
 
 return M

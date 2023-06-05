@@ -2,6 +2,8 @@
 -- =====                     PLUGINS                         =====
 -- ===============================================================
 
+local utils = require("utils")
+
 -- lazy.nvim automatic installaion
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -148,7 +150,7 @@ require("lazy").setup({
     init = function()
       local bmui = require("buffer_manager.ui")
       -- key mapping to l[ist] buffers to be managed (e.g bulk close)
-      utils.nmap_lua("<Leader>l", bmui.toggle_quick_menu)
+      utils.nmap("<Leader>l", bmui.toggle_quick_menu)
     end,
   },
   {
@@ -167,7 +169,7 @@ require("lazy").setup({
     init = function()
       local bufremove = require("mini.bufremove")
       -- key mapping to delete buffer while preserving windows
-      utils.nmap_lua("<Leader>d", bufremove.wipeout)
+      utils.nmap("<Leader>d", bufremove.wipeout)
     end
   },
   {

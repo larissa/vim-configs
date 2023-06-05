@@ -1,4 +1,4 @@
-utils = require("utils")
+local utils = require("utils")
 icons = require("icons")
 
 -- swap \ and ', use single quote as leader

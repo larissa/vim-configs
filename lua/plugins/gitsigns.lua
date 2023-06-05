@@ -1,5 +1,7 @@
 local M = {}
 
+local utils = require("utils")
+
 M.setup = function()
   require("gitsigns").setup({
     signs = {
@@ -55,10 +57,8 @@ M.setup = function()
     on_attach = function(bufnr)
       local gs = package.loaded.gitsigns
 
-      local function map(mode, l, r, opts)
-        opts = opts or {}
-        opts.buffer = bufnr
-        vim.keymap.set(mode, l, r, opts)
+      local function opts(desc)
+        return { buffer = bufnr, desc = "Gitsigns: " .. desc }
       end
 
       -- Navigation
@@ -75,15 +75,15 @@ M.setup = function()
       end, { expr=true })
 
       -- Actions
-      map("n", "<Leader>vs", gs.stage_hunk, { desc = "Stage hunk at position" })
-      map("n", "<Leader>vu", gs.undo_stage_hunk, { desc = "Unstage hunk at position" })
-      map("n", "<Leader>vr", gs.reset_hunk, { desc = "Reset hunk at position" })
-      map("v", "<Leader>vs", function() gs.stage_hunk {vim.fn.line("."), vim.fn.line("v")} end, { desc = "Stage selection" })
-      map("v", "<Leader>vr", function() gs.reset_hunk {vim.fn.line("."), vim.fn.line("v")} end, { desc = "Reset selection" })
-      map("n", "<Leader>vS", gs.stage_buffer, { desc = "Git stage buffer" })
-      map("n", "<Leader>vR", gs.reset_buffer, { desc = "Git reset buffer" })
-      map("n", "<Leader>vp", gs.preview_hunk, { desc = "Preview hunk at position" })
-      map("n", "<Leader>vb", function() gs.blame_line{full=true} end, { desc = "Git blame current line" })
+      utils.nmap("<Leader>vs", gs.stage_hunk, opts("Stage hunk at position"))
+      utils.nmap("<Leader>vu", gs.undo_stage_hunk, opts("Unstage hunk at position"))
+      utils.nmap("<Leader>vr", gs.reset_hunk, opts("Reset hunk at position"))
+      utils.vmap("<Leader>vs", function() gs.stage_hunk {vim.fn.line("."), vim.fn.line("v")} end, opts("Stage selection"))
+      utils.vmap("<Leader>vr", function() gs.reset_hunk {vim.fn.line("."), vim.fn.line("v")} end, opts("Reset selection"))
+      utils.nmap("<Leader>vS", gs.stage_buffer, opts("Git stage buffer"))
+      utils.nmap("<Leader>vR", gs.reset_buffer, opts("Git reset buffer"))
+      utils.nmap("<Leader>vp", gs.preview_hunk, opts("Preview hunk at position"))
+      utils.nmap("<Leader>vb", function() gs.blame_line{full=true} end, opts("Git blame current line"))
     end,
   })
 end
