@@ -81,7 +81,6 @@ M.setup = function()
       },
       buffers = {
         theme = "ivy",
-        initial_mode = "normal",
         mappings = {
           n = {
             ["dd"] = actions.delete_buffer,
