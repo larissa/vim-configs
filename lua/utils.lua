@@ -1,6 +1,6 @@
 local M = {}
 
-function map(mode, shortcut, command, opts)
+local function map(mode, shortcut, command, opts)
   opts = opts or {}
   opts.silent = true
   -- convenience function `vim.keymap.set` sets noremap by default

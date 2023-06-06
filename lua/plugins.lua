@@ -57,7 +57,7 @@ require("lazy").setup({
     "echasnovski/mini.bufremove",
     version = '*',
     config = function()
-      bufremove = require("mini.bufremove")
+      local bufremove = require("mini.bufremove")
       bufremove.setup {}
       -- delete buffer while preserving windows
       utils.nmap("<Leader>d", bufremove.wipeout)
