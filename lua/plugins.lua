@@ -28,7 +28,7 @@ require("lazy").setup({
       "RRethy/nvim-treesitter-endwise",
     },
     config = function()
-      require("plugins/treesitter").setup()
+      require("plugins.treesitter").setup()
     end
   },
   {
@@ -43,14 +43,14 @@ require("lazy").setup({
     "windwp/nvim-autopairs",
     event = "InsertEnter",
     config = function()
-      require("plugins/autopairs").setup()
+      require("plugins.autopairs").setup()
     end,
   },
   {
     "echasnovski/mini.surround",
     version = "*",
     config = function()
-      require("plugins/surround").setup()
+      require("plugins.surround").setup()
     end
   },
   {
@@ -88,7 +88,7 @@ require("lazy").setup({
   {
     "lewis6991/gitsigns.nvim",
     config = function()
-      require("plugins/gitsigns").setup()
+      require("plugins.gitsigns").setup()
     end,
   },
   {
@@ -102,7 +102,7 @@ require("lazy").setup({
   {
     "hrsh7th/nvim-cmp",
     config = function()
-      require("plugins/cmp").setup()
+      require("plugins.cmp").setup()
     end,
     event = { "InsertEnter", "CmdlineEnter" },
     dependencies = {
@@ -141,7 +141,7 @@ require("lazy").setup({
     "nvim-telescope/telescope.nvim",
     branch = "0.1.x",
     config = function()
-      require('plugins/telescope').setup()
+      require('plugins.telescope').setup()
     end,
     dependencies = {
       "nvim-telescope/telescope-fzf-native.nvim",
@@ -155,7 +155,7 @@ require("lazy").setup({
   {
     "lukas-reineke/indent-blankline.nvim",
     config = function()
-      require("plugins/indentlines").setup()
+      require("plugins.indentlines").setup()
     end,
     dependencies = "nvim-treesitter/nvim-treesitter",
   },
@@ -164,7 +164,7 @@ require("lazy").setup({
     version = "*",
     dependencies = "nvim-tree/nvim-web-devicons",
     config = function()
-      require("plugins/nvimtree").setup()
+      require("plugins.nvimtree").setup()
     end,
   },
   {
@@ -220,7 +220,7 @@ require("lazy").setup({
       "jose-elias-alvarez/null-ls.nvim",
     },
     config = function()
-      require("plugins/lsp")
+      require("plugins.lsp")
     end,
   },
   { "jose-elias-alvarez/null-ls.nvim" },
