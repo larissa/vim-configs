@@ -207,6 +207,10 @@ require("lazy").setup({
           undercurl = true,   -- use undercurl instead of underline for diagnostics
           background = true,
         },
+        highlights = {
+          QuickScopePrimary = { fg = '$blue', bg = '$bg1' },
+          QuickScopeSecondary = { fg = '$purple', bg = '$bg1' },
+        }
       }
       onedark.load()
     end,
