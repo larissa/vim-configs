@@ -2,48 +2,20 @@
 
 if [ $(uname -s) = 'Linux' ]
 then
-  if ! [ $SPIN ]; then
-    echo "---------------------------------------------------------"
-    echo "$(tput setaf 2)Preparing dependencies for Linux:$(tput sgr 0)"
-    echo "$(tput setaf 2)universal-ctags, ncurses-term, ripgrep, fzf, nodejs, yarn, neovim, fonts$(tput sgr 0)"
-    echo "---------------------------------------------------------"
-
-    echo "---------------------------------------------------------"
-    echo "$(tput setaf 3)Adding yarn's debian package repository.$(tput sgr 0)"
-    echo "---------------------------------------------------------"
-
-    curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-    echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-    sudo apt-get update
-
-    echo "---------------------------------------------------------"
-    echo "$(tput setaf 2)Installing system packages.$(tput sgr 0)"
-    echo "---------------------------------------------------------"
-
-    sudo apt-get install -y universal-ctags ncurses-term ripgrep fzf fonts-powerline nodejs yarn neovim
-  fi
-
   echo "---------------------------------------------------------"
-  echo "$(tput setaf 2)Installing Ruby neovim package.$(tput sgr 0)"
+  echo "$(tput setaf 2)Preparing dependencies for Linux:$(tput sgr 0)"
+  echo "$(tput setaf 2)universal-ctags, ncurses-term, ripgrep, fzf, neovim, fonts$(tput sgr 0)"
   echo "---------------------------------------------------------"
 
-  which rvm > /dev/null 2>&1
-  if [ $? -eq 0 ]
-  then
-    rvm @global do gem install neovim --no-document
-  else
-    sudo gem install neovim --no-document
-  fi
-
   echo "---------------------------------------------------------"
-  echo "$(tput setaf 2)Installing node neovim package$(tput sgr 0)"
+  echo "$(tput setaf 2)Installing system packages.$(tput sgr 0)"
   echo "---------------------------------------------------------"
 
-  yarn global add neovim --ignore-optional
+  sudo apt-get install -y universal-ctags ncurses-term ripgrep fzf fonts-powerline neovim
 else
   echo "---------------------------------------------------------"
   echo "$(tput setaf 2)Preparing dependencies for MacOS:$(tput sgr 0)"
-  echo "$(tput setaf 2)homebrew, nodejs, yarn, neovim, fonts$(tput sgr 0)"
+  echo "$(tput setaf 2)homebrew, neovim, fonts$(tput sgr 0)"
   echo "---------------------------------------------------------"
 
   which brew > /dev/null 2>&1
@@ -60,26 +32,14 @@ else
   fi
 
   echo "---------------------------------------------------------"
-  echo "$(tput setaf 2)Installing ripgrep, fzf, node, yarn, and neovim as system packages.$(tput sgr 0)"
+  echo "$(tput setaf 2)Installing ripgrep, fzf, and neovim as system packages.$(tput sgr 0)"
   echo "---------------------------------------------------------"
 
-  for package in ripgrep fzf node yarn neovim
+  for package in ripgrep fzf neovim
   do
     brew install $package
     echo "---------------------------------------------------------"
   done
-
-  echo "---------------------------------------------------------"
-  echo "$(tput setaf 2)Installing Ruby neovim package.$(tput sgr 0)"
-  echo "---------------------------------------------------------"
-
-  sudo gem install neovim
-
-  echo "---------------------------------------------------------"
-  echo "$(tput setaf 2)Installing node neovim package$(tput sgr 0)"
-  echo "---------------------------------------------------------"
-
-  yarn global add neovim --ignore-optional
 
   echo "---------------------------------------------------------"
   echo "$(tput setaf 2)JARVIS: Installing system fonts.$(tput sgr 0)"
@@ -94,46 +54,6 @@ echo "$(tput setaf 2)Linking dotfiles.$(tput sgr 0)"
 echo "---------------------------------------------------------"
 
 ln -s ~/.nvim ${XDG_CONFIG_HOME:-$HOME/.config}/nvim
-
-echo "---------------------------------------------------------"
-echo "$(tput setaf 2)Installing plugins.$(tput sgr 0)"
-echo "---------------------------------------------------------"
-
-cd ~/.nvim
-curl -fLo autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-nvim -es -i NONE -u 'init.vim' -c 'PlugInstall' -c 'qa'
-nvim -es -i NONE -u 'init.vim' -c 'UpdateRemotePlugins' -c 'qa'
-nvim -es -i NONE -u 'init.vim' -c 'call coc#util#install()' -c 'qa'
-
-echo "---------------------------------------------------------"
-echo "$(tput setaf 2)Installing autocomplete tools.$(tput sgr 0)"
-echo "---------------------------------------------------------"
-
-which rvm > /dev/null 2>&1
-if [ $? -eq 0 ]
-then
-  rvm @global do gem install solargraph --no-document
-else
-  sudo gem install solargraph --no-document
-fi
-
-nvim -es -i NONE -u 'init.vim' -c 'CocInstall coc-json' -c 'qa'
-nvim -es -i NONE -u 'init.vim' -c 'CocInstall coc-solargraph coc-tsserver coc-css' -c 'qa'
-
-echo "---------------------------------------------------------"
-echo "$(tput setaf 2)Installing linters.$(tput sgr 0)"
-echo "---------------------------------------------------------"
-
-which rvm > /dev/null 2>&1
-if [ $? -eq 0 ]
-then
-  rvm @global do gem install rubocop --no-document
-else
-  sudo gem install rubocop --no-document
-fi
-
-yarn global add eslint eslint-plugin-vue babel-eslint eslint-plugin-react --ignore-optional
-yarn global add stylelint stylelint-scss --ignore-optional
 
 echo "---------------------------------------------------------"
 echo "$(tput setaf 2)Install complete.$(tput sgr 0)"

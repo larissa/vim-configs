@@ -107,6 +107,7 @@ require("lazy").setup({
     event = { "InsertEnter", "CmdlineEnter" },
     dependencies = {
       "saadparwaiz1/cmp_luasnip",
+      "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
       "hrsh7th/cmp-cmdline",
@@ -170,7 +171,7 @@ require("lazy").setup({
     "majutsushi/tagbar",
     config = function()
       -- toggle g[o] to navigation
-      utils.nmap("<Leader>g", ":TagbarToggle<CR>")
+      utils.nmap("<Leader>n", ":TagbarToggle<CR>")
       vim.g.tagbar_autoclose = 1
       vim.g.tagbar_autofocus = 1
       vim.g.tagbar_map_help = "<F1>"
@@ -201,6 +202,11 @@ require("lazy").setup({
       onedark.setup {
         style = 'warm',
         toggle_style_key = '<F9>',
+        diagnostics = {
+          darker = true, -- darker colors for diagnostic
+          undercurl = true,   -- use undercurl instead of underline for diagnostics
+          background = true,
+        },
       }
       onedark.load()
     end,
@@ -208,19 +214,26 @@ require("lazy").setup({
 
   -- LSP plugins
   {
-    "w0rp/ale",
-    init = function()
-      -- customize linter signs
-      vim.g.ale_sign_error = "●"
-      vim.g.ale_sign_warning = "•"
-      -- customize linter colours
-      vim.cmd("highlight link ALEErrorSign DiffDelete")
-      -- only lint when leaving insert mode after an edit
-      vim.g.ale_lint_on_text_changed = "normal"
-      vim.g.ale_lint_on_insert_leave = 1
-      -- show error details with m[ore details]
-      utils.nmap("<Leader>m", ":ALEDetail<CR>")
-    end
+    "neovim/nvim-lspconfig",
+    dependencies = {
+      "williamboman/mason-lspconfig.nvim",
+      "jose-elias-alvarez/null-ls.nvim",
+    },
+    config = function()
+      require("plugins/lsp")
+    end,
   },
-  { "neoclide/coc.nvim", branch = "release" },
+  { "jose-elias-alvarez/null-ls.nvim" },
+  {
+    "williamboman/mason-lspconfig.nvim",
+    dependencies = "williamboman/mason.nvim",
+  },
+  {
+    "williamboman/mason.nvim",
+    build = function()
+      pcall(function()
+        require("mason-registry").refresh()
+      end)
+    end,
+  },
 })

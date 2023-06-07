@@ -48,6 +48,10 @@ set scrolloff=3
 " some stuff to get the mouse going in term
 set mouse=a
 
+" faster refresh
+set updatetime=1000
+set noswapfile
+
 " jump to last cursor position when opening a file
 " dont do it when writing a commit log entry
 autocmd BufReadPost * call SetCursorPosition()

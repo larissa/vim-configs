@@ -161,10 +161,11 @@ local config = function()
       documentation = cmp_window.bordered(),
     },
     sources = {
-      { name = "path" },
-      { name = "luasnip" },
+      { name = "nvim_lsp" },
       { name = "nvim_lua" },
+      { name = "luasnip" },
       { name = "buffer" },
+      { name = "path" },
     },
     cmdline = {
       enable = false,
