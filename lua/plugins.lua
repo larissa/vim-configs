@@ -210,6 +210,7 @@ require("lazy").setup({
         highlights = {
           QuickScopePrimary = { fg = '$blue', bg = '$bg1' },
           QuickScopeSecondary = { fg = '$purple', bg = '$bg1' },
+          IblScope = { fg = '$grey', fmt = "nocombine" },
         }
       }
       onedark.load()
