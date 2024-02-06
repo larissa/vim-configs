@@ -222,13 +222,13 @@ require("lazy").setup({
     "neovim/nvim-lspconfig",
     dependencies = {
       "williamboman/mason-lspconfig.nvim",
-      "jose-elias-alvarez/null-ls.nvim",
+      "nvimtools/none-ls.nvim",
     },
     config = function()
       require("plugins.lsp")
     end,
   },
-  { "jose-elias-alvarez/null-ls.nvim" },
+  { "nvimtools/none-ls.nvim" },
   {
     "williamboman/mason-lspconfig.nvim",
     dependencies = "williamboman/mason.nvim",
