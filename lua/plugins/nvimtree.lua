@@ -20,6 +20,8 @@ local function on_attach(bufnr)
   utils.nmap("-", api.node.navigate.parent_close, opts("Close Directory"))
   utils.nmap("h", "5zh", opts("Move screen to left"))
   utils.nmap("l", "5zl", opts("Move screen to right"))
+  utils.nmap("y", api.fs.copy.node, opts("Copy"))
+  utils.nmap("c", api.fs.copy.filename, opts("Copy Name"))
 end
 
 
