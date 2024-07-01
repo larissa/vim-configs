@@ -1,7 +1,7 @@
 local M = {}
 
 local servers = {
-  -- "ruby_ls",
+  -- "ruby_lsp",
   "solargraph",
   "lua_ls",
   "pylsp",
