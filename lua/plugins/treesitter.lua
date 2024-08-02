@@ -6,6 +6,7 @@ function M.setup()
     ensure_installed = {
       "bash",
       "css",
+      "elixir",
       "fish",
       "go",
       "graphql",
