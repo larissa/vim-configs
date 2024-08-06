@@ -103,10 +103,10 @@ function M.setup()
 
     textsubjects = {
         enable = true,
-        prev_selection = ',',
+        prev_selection = '-',
         keymaps = {
           ['.'] = 'textsubjects-smart',
-          [':'] = 'textsubjects-container-outer',
+          ['+'] = 'textsubjects-container-outer',
         },
     },
 

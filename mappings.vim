@@ -97,6 +97,7 @@ vnoremap ; :
 
 " regain ; functionality by mapping it to :
 nnoremap : ;
+vnoremap : ;
 
 " toggle language spellcheck
 nnoremap <F7> :setlocal spell! spelllang=en<CR>
