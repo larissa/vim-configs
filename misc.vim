@@ -8,6 +8,8 @@ set number
 set relativenumber
 " wrap lines
 set linebreak
+" hide status line mode message
+set noshowmode
 
 " makes vim show invisible chars
 set list listchars=tab:▸\ ,trail:·,nbsp:¬
