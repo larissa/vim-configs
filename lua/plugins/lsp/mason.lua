@@ -5,7 +5,7 @@ local servers = {
   "solargraph",
   "lua_ls",
   "pylsp",
-  "tsserver",
+  "ts_ls",
   "jsonls",
   "elixirls",
   "rust_analyzer",
