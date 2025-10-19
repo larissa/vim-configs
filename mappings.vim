@@ -104,4 +104,4 @@ nnoremap <F7> :setlocal spell! spelllang=en<CR>
 nnoremap <F8> :setlocal spell! spelllang=pt<CR>
 
 " open file on github
-nnoremap <silent> <F10> :silent exe "!fish -c 'git_open ".expand('%:p')." ".line('.')."'"<CR>
+nnoremap <silent> <F10> :silent exe "!zsh --login -c 'git_open ".expand('%:p')." ".line('.')."'"<CR>

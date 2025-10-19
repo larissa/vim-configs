@@ -6,7 +6,7 @@ vim.g.mapleader = "'"
 utils.nmap("\\", "'")
 
 -- vim needs a POSIX compatible shell
-vim.opt.shell = "/bin/sh"
+vim.opt.shell = "/bin/zsh"
 
 -- netrw will be replaced by a plugin
 vim.g.loaded_netrw = 1
